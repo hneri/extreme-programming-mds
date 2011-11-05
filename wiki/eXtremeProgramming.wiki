@@ -1,1 +1,1 @@
-  *[UserStories]
+  *[User Stories]
