@@ -1,13 +1,127 @@
-#summary One-sentence summary of this page.
-
 = User Stories =
 
-Add your content here.
+------
+== Uma estória... ==
+
+Uma estória não é mais do que a descrição de uma pequena funcionalidade que o cliente pretende ver desenvolvida no sistema. 
+
+O termo em inglês é story (estória – conto) e não history (história - relato de fatos);
+
+------
+
+==O que são:==
+ * Uma breve descrição de uma funcionalidade que foi discutida
+ * São tradicionalmente escritas em cartões ou post-its 
+ * Testes para determinar quando a estória está completa
+
+==O que não são:==
+ * Documentos de implementação
+ * Documentação de requisitos
+ * Imutáveis
+
+-----
+
+== Características Importantes:==
+
+ * Stakeholders escrevem User Stories, não os desenvolvedores. User Stories são simples o suficiente para que as pessoas possam aprender a escrevê-las em alguns minutos.
+ * User Stories são usadas para estimar o esforço da sua implementação.
+ * User Stories são usadas para indicar a prioridade dos requisitos
+
+-----
+
+==User Stories afetam o  planejamento em...==
+
+ * Planejamento:  a prioridade atribuída a uma user story define quando o requisito será implementado. 
+ * Estimativas: o trabalho que será feito na iteração depende da estimativa do esforço para que os produtos de trabalho (incluindo User Stories) sejam implementados.
+
+------
+
+== Aspectos Críticos: 3C ==
+
+User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamente atendidos:
+
+ # Cards: user stories devem ser escritos em cartões para que sejam naturalmente pequenos;
+ # Conversation: lembrete para identificar uma funcionalidade que foi conversada e discutida com os stakeholders;
+ # Confirmation: o cliente define uma maneira de validar esse pedido.
+== Exemplos da utilização do 3C ==
+
+*Cards*
+
+- "Um administrador pode cadastrar um jogo para que os apostadores possam fazer seus palpites de resultado"
+
+ 
+*Conversation*
+
+- O administrador pode cadastrar o jogo quando quiser? E se ele cadastrar muito em cima?
+
+- Ah, eu acho que ele tem que cadastrar com no mínimo 48h de antecedência
+
+- Legal... concordo
+
+*Confirmation (Regras de negócio)*
+
+- Um administrador não poderá cadastrar um jogo com menos de 48h de antecedência 
+
+- O jogo deve pertencer ao campeonato corrente 
+
+- Um administrador não poderá cadastrar dois jogos envolvendo os mesmos times no mesmo horário 
+
+-------
+
+==Como escrever boas estórias?==
+
+*Independent:* Estórias devem ser independentes uma das outras;
+
+*Negotiable:* Estórias não são contratos, mas lembretes para discussões;
+
+*Valuable:* Estórias devem agregar valor para o cliente;
+
+*Estimatable:* Os desenvolvedores devem ser capazes de estimar o tamanhos das estórias;
+
+*Small:* estórias grandes dificultam as estimativas. Bem como estórias muito pequenas. Quebre ou agrupe dependendo do caso.
+
+*Testable:* Estórias devem ser possíveis de serem testadas.
+
+--------
+Independent
+
+• Remover dependências entre as estórias
+• Remover as duplicações
+Exemplo:
+• Um usuário pode entrar com seu primeiro nome
+• Um usuário pode entrar com seu último nome
+• Um usuário pode, opcionalmente, entrar com o seu nome do meio
+Melhor:
+• Um usuário pode entrar com o seu primeiro nome, com o seu último nome ou opcionalmente pode entrar com o seu nome do meio
+
+Negotiable
 
 
-= Details =
+Estórias não são imutáveis
+• Elas representam uma conversa, não um requisito
+– Conversas podem ser resumidas
+– Conversas não são completas
+ Não devem incluir muitos detalhes
+- Muitos detalhes podem dar uma falta impressão de completude e passar a impressão de que novas conversas não são mais necessárias.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Valuable
+
+Anti-exemplos:
+– A aplicação deve ser escrita usando Ruby on Rails
+– MySQL será usado para a persistência dos dados
+Exemplo:
+– Os dados serão persistidos em um banco de dados de qualidade e free
+
+Estimatable
+
+• Uma estória que não pode ser estimada não pode ser usada no planejamento
+
+• Se a estória for muito complexa ela deve ser dividida em estórias menores
+
+Small
+
+
+
+Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
+
+
