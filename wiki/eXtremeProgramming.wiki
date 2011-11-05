@@ -1,4 +1,4 @@
-  * [ UserStories ]
+  * [ User Stories ]
   * [ Testes Unitários ]
   * [ Testes de Aceitação ]
   * [ Integração Contínua ]
