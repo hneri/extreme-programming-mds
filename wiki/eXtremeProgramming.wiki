@@ -1,4 +1,4 @@
- * [UserStories HOWTO articles]
+ * [UserStories User Stories]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
     * [ArticlesStyle CSS and style]
