@@ -1,4 +1,4 @@
- * [eXtremeProgramming eXtreme Programming]
+ * [XP eXtreme Programming]
  * [UserStories User Stories]
  * [TestesUnitarios Testes Unitários]
  * [TestesAceitacao Testes de Aceitação]
