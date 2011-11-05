@@ -156,6 +156,8 @@ Especificando o ator, a ação e a funcionalidade desejada
 
 [http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_como_escrever_user_storie.png]
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_004.png]
+
 ---------------
 == Testes de aceitação ==
 
