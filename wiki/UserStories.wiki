@@ -154,6 +154,8 @@ Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, e
 
 Especificando o ator, a ação e a funcionalidade desejada
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_como_escrever_user_storie.png]
+
 ---------------
 == Testes de aceitação ==
 
