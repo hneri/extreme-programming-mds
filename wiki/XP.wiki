@@ -25,16 +25,16 @@ A XP incentiva o controle da qualidade como variável do projeto, pois o pequeno
 
 Para aplicar os valores e princípios durante o desenvolvimento de software, XP propõe uma série de práticas. Há uma confiança muito grande na sinergia entre elas, os pontos fracos de cada uma são superados pelos pontos fortes de outras.
 
-Jogo de Planejamento (Planning Game);
-Pequenas Versões (Small Releases);
-Metáfora (Metaphor);
-Projeto Simples (Simple Design);
-Time Coeso (Whole Team);
-Ritmo Sustentável (Sustainable Pace);
-Reuniões em pé (Stand-up Meeting);
-Posse Coletiva (Collective Ownership);
-Programação em Pares (Pair Programming)
-Padrões de Codificação (Coding Standards);
-Testes Constantes (Unitários e de Aceitação);
-Refatoração (Refactoring);
-Integração Contínua (Continuous Integration);
+ * Jogo de Planejamento (Planning Game);
+ * Pequenas Versões (Small Releases);
+ * Metáfora (Metaphor);
+ * Projeto Simples (Simple Design);
+ * Time Coeso (Whole Team);
+ * Ritmo Sustentável (Sustainable Pace);
+ * Reuniões em pé (Stand-up Meeting);
+ * Posse Coletiva (Collective Ownership);
+ * Programação em Pares (Pair Programming)
+ * [PadroesCodificacao Padrões de Codificação (Coding Standards);]
+ * Testes Constantes ([TesteUnitario Unitários] e de [TesteAceitacao Aceitação]);
+ * [Refatoracao Refatoração (Refactoring);]
+ * [IntegracaoContinua Integração Contínua (Continuous Integration);]
