@@ -2,4 +2,4 @@
 
 Um teste formal realizado para determinar se o sistema satisfaz ou não os critérios de aceitação determinados e para permitir ao cliente decidir se aceita ou não o sistema.
 São originalmente chamados de Testes Funcionais, pois cada teste de aceitação testa uma funcionalidade de uma [UserStories User Story]. Testes de Aceitação são diferentes dos [TestesUnitarios Testes Unitários] que são escritos pelos desenvolvedores, enquanto que os Testes de Aceitação devem ser escritos pelo Cliente.
-Os Testes de Aceitação foram propostos por [http://www.threeriversinstitute.org/blog/ Kent Beck] em uma votação na [http://c2.com/xp/XpMailingList.html XpMailingList] no começo de abril de 2000. Aprovado pela comissão agora é um padrão em [eXtremeProgramming XP]. 
+Os Testes de Aceitação foram propostos por [http://www.threeriversinstitute.org/blog/ Kent Beck] em uma votação na [http://c2.com/xp/XpMailingList.html XpMailingList] no começo de abril de 2000. Aprovado pela comissão, agora é um padrão em [eXtremeProgramming XP]. 
