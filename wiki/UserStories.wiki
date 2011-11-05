@@ -308,7 +308,7 @@ O que deve ser feito se o livro não for encontrado?
 ||Critérios para aceitação||
 || Cada cartão deve ter um identificador único||
 
----
+-----
 
 ||US05||
 ||Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso||
@@ -319,7 +319,7 @@ O que deve ser feito se o livro não for encontrado?
 ---------
 == CRC Cards ==
 
---------
+
 
 *US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes*
 
