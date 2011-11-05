@@ -14,7 +14,7 @@ O termo em inglês é story (estória – conto) e não history (história - rel
  * São tradicionalmente escritas em cartões ou post-its 
  * Testes para determinar quando a estória está completa
 
-==O que não são:==
+== O que não são: ==
  * Documentos de implementação
  * Documentação de requisitos
  * Imutáveis
@@ -29,7 +29,7 @@ O termo em inglês é story (estória – conto) e não history (história - rel
 
 -----
 
-==User Stories afetam o  planejamento em...==
+== User Stories afetam o  planejamento em... ==
 
  * Planejamento:  a prioridade atribuída a uma user story define quando o requisito será implementado. 
  * Estimativas: o trabalho que será feito na iteração depende da estimativa do esforço para que os produtos de trabalho (incluindo User Stories) sejam implementados.
@@ -43,6 +43,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
  # Cards: user stories devem ser escritos em cartões para que sejam naturalmente pequenos;
  # Conversation: lembrete para identificar uma funcionalidade que foi conversada e discutida com os stakeholders;
  # Confirmation: o cliente define uma maneira de validar esse pedido.
+
 == Exemplos da utilização do 3C ==
 
 *Cards*
@@ -68,7 +69,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
 -------
 
-==Como escrever boas estórias?==
+== Como escrever boas estórias? ==
 
 *Independent:* Estórias devem ser independentes uma das outras;
 
@@ -83,62 +84,83 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 *Testable:* Estórias devem ser possíveis de serem testadas.
 
 --------
-Independent
+== Independent ==
 
-• Remover dependências entre as estórias
-• Remover as duplicações
-Exemplo:
-• Um usuário pode entrar com seu primeiro nome
-• Um usuário pode entrar com seu último nome
-• Um usuário pode, opcionalmente, entrar com o seu nome do meio
-Melhor:
-• Um usuário pode entrar com o seu primeiro nome, com o seu último nome ou opcionalmente pode entrar com o seu nome do meio
+ * Remover dependências entre as estórias
 
-Negotiable
+ * Remover as duplicações
+
+*Exemplo:*
+
+ * Um usuário pode entrar com seu primeiro nome
+
+ * Um usuário pode entrar com seu último nome
+
+ * Um usuário pode, opcionalmente, entrar com o seu nome do meio
+
+*Melhor:*
+
+ * Um usuário pode entrar com o seu primeiro nome, com o seu último nome ou opcionalmente pode entrar com o seu nome do meio
 
 
-Estórias não são imutáveis
-• Elas representam uma conversa, não um requisito
+== Negotiable ==
+
+
+*Estórias não são imutáveis*
+
+ * Elas representam uma conversa, não um requisito
+
 – Conversas podem ser resumidas
+
 – Conversas não são completas
- Não devem incluir muitos detalhes
+
+ * Não devem incluir muitos detalhes
+
 - Muitos detalhes podem dar uma falta impressão de completude e passar a impressão de que novas conversas não são mais necessárias.
 
-Valuable
 
-Anti-exemplos:
+== Valuable ==
+
+*Anti-exemplos:*
+
 – A aplicação deve ser escrita usando Ruby on Rails
+
 – MySQL será usado para a persistência dos dados
-Exemplo:
+
+*Exemplo:*
+
 – Os dados serão persistidos em um banco de dados de qualidade e free
 
-Estimatable
 
-• Uma estória que não pode ser estimada não pode ser usada no planejamento
+== Estimatable ==
 
-• Se a estória for muito complexa ela deve ser dividida em estórias menores
+ * Uma estória que não pode ser estimada não pode ser usada no planejamento
 
-Small
+ * Se a estória for muito complexa ela deve ser dividida em estórias menores
 
 
+== Small ==
 
 Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
 
 
-Testable
+
+== Testable ==
 
 [http://code.google.com/p/extreme-programming-mds/source/browse/wiki/testable.jpg]
 
 --------------
-Escrevendo User Stories
+== Escrevendo User Stories ==
 
 Especificando o ator, a ação e a funcionalidade desejada
 
 ---------------
-Testes de aceitação
+== Testes de aceitação ==
 
  * Os testes de aceitação têm a finalidade de confirmar que o sistema funciona de acordo com a especificação. 
- * A cada estória estão associados um conjunto de testes de aceitação, que devem ser definidos pelo cliente, antes da construção da estória.  
+
+ * A cada estória estão associados um conjunto de testes de aceitação, que devem ser definidos pelo cliente, antes da construção da estória. 
+ 
  * O nome, testes de aceitação, tem como objetivo indicar que estes são os testes que o cliente definiu como sendo necessários o sistema passar de modo a que a história possa ser dada como concluída.
 
 == Exemplo ==
@@ -170,57 +192,66 @@ Que testes de aceitação podemos definir?
 
 
 ------
-     Testes de Aceitação
+== Testes de Aceitação ==
 
 Algumas perguntas podem ser feitas quanto a usabilidade dessa funcionalidade, como por exemplo:
+
+{{{
 Como o usuário fará essa busca no sistema?
 Como o usuário deseja que seja apresentada a informação solicitada?
 O que deve ser feito se o livro não for encontrado?
+}}}
 
 ------
-CRC Card
+== CRC Card ==
 
+*Class*
 
-
-• Class
 – Qual o nome da classe e a classificação?
 
-• Responsibility
+*Responsibility*
+
 – Qual a responsabilidade da classe?
 
-• Collaboration
+*Collaboration*
+
 – Quais classes se comunicam entre si?
 
 ------
-
-Exemplo: MVC
+== Exemplo: MVC ==
 
 
 
 -----
-Como extrair classes e responsabilidades?
+== Como extrair classes e responsabilidades? ==
 
-• Procurando classes
+*Procurando classes*
+
 – Extração de substantivos
 
-• Procurando responsabilidades
+*Procurando responsabilidades*
+
 – Extração de verbos
 
 --------
-Exemplo Prático
+== Exemplo Prático ==
 
 -----
-User Stories
+== User Stories ==
 
-US01 – Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes.
-US02 – Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.
-US03 – Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da devolução dos vídeos.
-US04 – Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos.
-US05 – Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso.
+ * US01 – Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes.
+
+ * US02 – Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.
+
+ * US03 – Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da devolução dos vídeos.
+
+ * US04 – Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos.
+
+ * US05 – Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso.
 
 -----
 
-User Stories
+== User Stories e Critérios de Aceitação ==
 
 ||US01||
 ||Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes||
@@ -259,9 +290,9 @@ User Stories
  O cliente só poderá alugar vídeos se não tiver débito pendente||
 
 ---------
-CRC Cards
+== CRC Cards ==
 
-US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes
+*US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes*
 
 Substantivos: gerente, vídeos, locadora
 Verbos: manter, catalogar
@@ -281,7 +312,7 @@ Verbos: manter, catalogar
 
 
 --------
-Referências
+=Referências= 
 
 [http://www.agilemodeling.com/artifacts/userStory.htm#Figure1 Agile Modeling, Introduction to User Stories]
 
