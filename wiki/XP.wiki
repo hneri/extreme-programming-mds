@@ -35,6 +35,6 @@ Para aplicar os valores e princípios durante o desenvolvimento de software, XP 
  * Posse Coletiva (Collective Ownership);
  * Programação em Pares (Pair Programming)
  * [PadroesCodificacao Padrões de Codificação (Coding Standards);]
- * Testes Constantes ([TestesUnitario Unitários] e de [TestesAceitacao Aceitação]);
+ * Testes Constantes ([TestesUnitarios Unitários] e de [TestesAceitacao Aceitação]);
  * [Refatoracao Refatoração (Refactoring);]
  * [IntegracaoContinua Integração Contínua (Continuous Integration);]
