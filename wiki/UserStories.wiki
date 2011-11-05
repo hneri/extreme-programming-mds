@@ -147,7 +147,7 @@ Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, e
 
 == Testable ==
 
-[http://code.google.com/p/extreme-programming-mds/source/browse/wiki/testable.jpg]
+[http://extreme-programming-mds.googlecode.com/svn/wiki/testable.jpg]
 
 --------------
 == Escrevendo User Stories ==
