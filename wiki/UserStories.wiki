@@ -284,11 +284,15 @@ O que deve ser feito se o livro não for encontrado?
 ||Critérios para aceitação||
 || Cada vídeo cadastrado deve ter um ID associado, Para cada vídeo deve ser possível cadastrar o nome, o ano, o gênero, a categoria e a quantidade existente||
 
+-----
+
 ||US02||
 ||Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.||
 
 ||Critérios para aceitação||
 || Cada cliente deve ter um cartão identificador associado, Para cada cliente deve ser possível cadastrar nome, telefone, endereço, CPF e RG||
+
+-----
 
 ||US03||
 ||Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos||
@@ -296,11 +300,15 @@ O que deve ser feito se o livro não for encontrado?
 ||Critérios para aceitação||
 || Os vídeos com dois ou mais dias de atraso devem ser destacados||
 
+----
+
 ||US04||
 ||Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos||
 
 ||Critérios para aceitação||
 || Cada cartão deve ter um identificador único||
+
+---
 
 ||US05||
 ||Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso||
