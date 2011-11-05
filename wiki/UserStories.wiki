@@ -158,6 +158,8 @@ Especificando o ator, a ação e a funcionalidade desejada
 
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_004.png]
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_00003.png]
+
 ---------------
 == Testes de aceitação ==
 
@@ -198,6 +200,10 @@ Que testes de aceitação podemos definir?
 ------
 == Testes de Aceitação ==
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/001.jpg]
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/002.jpg]
+
 Algumas perguntas podem ser feitas quanto a usabilidade dessa funcionalidade, como por exemplo:
 
 {{{
@@ -224,6 +230,8 @@ O que deve ser feito se o livro não for encontrado?
 ------
 == Exemplo: MVC ==
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_mvc.jpg]
+
 
 
 -----
@@ -236,6 +244,17 @@ O que deve ser feito se o livro não for encontrado?
 *Procurando responsabilidades*
 
 – Extração de verbos
+------
+
+== Exemplos ==
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/crc-01.jpg]
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/crc001.jpg]
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/crc-02.png]
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/crc02.jpg]
 
 --------
 == Exemplo Prático ==
