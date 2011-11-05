@@ -381,7 +381,7 @@ Verbos: ter, alugar
 
 -------
 
-*US04 - Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso*
+*US05 - Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso*
 
 Substantivos: funcionário, vídeos
 Verbos: manter, cobrar
