@@ -282,15 +282,13 @@ O que deve ser feito se o livro não for encontrado?
 ||Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes||
 
 ||Critérios para aceitação||
-|| Cada vídeo cadastrado deve ter um ID associado
- Para cada vídeo deve ser possível cadastrar o nome, o ano, o gênero, a categoria e a quantidade existente||
+|| Cada vídeo cadastrado deve ter um ID associado, Para cada vídeo deve ser possível cadastrar o nome, o ano, o gênero, a categoria e a quantidade existente||
 
 ||US02||
 ||Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.||
 
 ||Critérios para aceitação||
-|| Cada cliente deve ter um cartão identificador associado
- Para cada cliente deve ser possível cadastrar nome, telefone, endereço, CPF e RG||
+|| Cada cliente deve ter um cartão identificador associado, Para cada cliente deve ser possível cadastrar nome, telefone, endereço, CPF e RG||
 
 ||US03||
 ||Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos||
@@ -308,14 +306,12 @@ O que deve ser feito se o livro não for encontrado?
 ||Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso||
 
 ||Critérios para aceitação||
-|| Cada cliente pode alugar no máximo cinco vídeos por vez
- Os vídeos podem ser alugados por no máximo três dias
- O cliente só poderá alugar vídeos se não tiver vídeos pendentes para devolução
- Caso o cliente tenha vídeos pendentes ele deverá pagar uma extra antes de poder alugar mais vídeos
- O cliente só poderá alugar vídeos se não tiver débito pendente||
+|| Cada cliente pode alugar no máximo cinco vídeos por vez, Os vídeos podem ser alugados por no máximo três dias, O cliente só poderá alugar vídeos se não tiver vídeos pendentes para devolução, Caso o cliente tenha vídeos pendentes ele deverá pagar uma extra antes de poder alugar mais vídeos, O cliente só poderá alugar vídeos se não tiver débito pendente||
 
 ---------
 == CRC Cards ==
+
+--------
 
 *US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes*
 
@@ -334,7 +330,57 @@ Verbos: manter, catalogar
 ||Responsabilidades||||Colaboração||
 ||Manter dados de clientes, de vídeos e de aluguéis||||Vídeo, Gerente, Cliente, Aluguel||
 
+-----------
 
+*US02 - Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.*
+
+Substantivos: gerente, clientes, locadora
+Verbos: manter
+
+*Cliente*
+||Responsabilidades||||Colaboração||
+||Descrever as características dos clientes||||Locadora||
+
+------
+
+*US03 - Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos*
+
+Substantivos: gerente, clientes, relatório, vídeos
+Verbos: imprimir, poder, relembrar
+
+*Gerente*
+||Responsabilidades||||Colaboração||
+||Imprimir Relatórios||||Locadora, Relatório||
+
+*Relatório*
+||Responsabilidades||||Colaboração||
+||Descrever as características dos relatórios||||Gerente||
+
+------
+
+*US04 - Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos*
+
+Substantivos: cliente, cartão, vídeos
+Verbos: ter, alugar
+
+*Cliente*
+||Responsabilidades||||Colaboração||
+||Alugar Vídeos||||Locadora||
+
+*Cartão*
+||Responsabilidades||||Colaboração||
+||Identificar os Clientes||||Gerente||
+
+-------
+
+*US04 - Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso*
+
+Substantivos: funcionário, vídeos
+Verbos: manter, cobrar
+
+*Funcionário*
+||Responsabilidades||||Colaboração||
+||Realizar a locação de vídeos, Realizar a devolução de vídeos, Cobrar taxas dos clientes||||Locadora||
 
 --------
 =Referências= 
