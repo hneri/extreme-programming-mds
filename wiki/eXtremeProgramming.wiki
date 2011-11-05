@@ -1,1 +1,6 @@
-  *[Stories
+ * [ User Stories]
+ * [ Testes Unitários]
+ * [ Testes de Aceitação]
+ * [ Integração Contínua]
+ * [ Refatoração]
+ * [ Cobertura de Código]
