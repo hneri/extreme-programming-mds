@@ -164,9 +164,7 @@ Especificando o ator, a ação e a funcionalidade desejada
 == Testes de aceitação ==
 
  * Os testes de aceitação têm a finalidade de confirmar que o sistema funciona de acordo com a especificação. 
-
  * A cada estória estão associados um conjunto de testes de aceitação, que devem ser definidos pelo cliente, antes da construção da estória. 
- 
  * O nome, testes de aceitação, tem como objetivo indicar que estes são os testes que o cliente definiu como sendo necessários o sistema passar de modo a que a história possa ser dada como concluída.
 
 == Exemplo ==
