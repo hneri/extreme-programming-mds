@@ -126,4 +126,4 @@ Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, e
 
 
 
-[testable teste]
+[http://code.google.com/p/extreme-programming-mds/source/browse/wiki/testable.jpg]
