@@ -259,6 +259,8 @@ O que deve ser feito se o livro não for encontrado?
 --------
 == Exemplo Prático ==
 
+[http://extreme-programming-mds.googlecode.com/svn/wiki/avs.jpg]
+
 -----
 == User Stories ==
 
