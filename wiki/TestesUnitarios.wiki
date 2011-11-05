@@ -12,6 +12,7 @@ Os programadores escrevem os testes método a método. Um programador escreve um
 
 Os testes de unidade escritos pelo programador sempre executam a 100%. Se um dos testes de unidade falha, ninguém no time tem um trabalho mais importante do que consertar os testes. Isso porque, se um teste está falhando, você tem uma quantidade desconhecida de trabalho a fazer para consertá-lo. Pode levar apenas um minuto, mas também pode durar um mês.
 
+-----------------
 
 == Testes Unitários com JUnit ==
 
@@ -19,9 +20,13 @@ O JUnit é um framework open-source, criado por Erich Gamma e Kent Beck, com sup
 Esse framework facilita a criação de código para a automação de testes com apresentação dos resultados. Com ele, pode ser verificado se cada método de uma classe funciona da forma esperada, exibindo possíveis erros ou falhas.
 O teste de unidade testa o menor dos componentes de um sistema de maneira isolada. Cada uma dessas unidades (chamadas de métodos) define um conjunto de estímulos, e de dados de entrada e saída associados a cada estímulo. As entradas são parâmetros e as saídas são o valor de retorno, exceções ou o estado do objeto. Tipicamente um teste unitário executa um método individualmente e compara uma saída conhecida após o processamento da mesma.
 
+-----------
+
 === Configuração ===
 Para utilizar o JUnit, é necessário a utilização do .jar do JUnit que pode ser encontrado na [http://www.junit.org página principal] do próprio framework. Para configurar o JUnit em seu ambiente, é necessário adicionar o .jar do JUnit ao caminho do seu projeto.
 
+
+----------
 === Exemplo utilizando JUnit 4.x ===
 
 *Classe:*
@@ -52,7 +57,9 @@ public class TesteCalculadora {
 }
 }}}
 
-== Exemplo Prático - Sistema AVS ==
+---------------
+
+== Exemplo Prático - [http://code.google.com/p/sistemaavs-mds-01/ Sistema AVS] ==
 
 * Classe que realiza locação de filmes: *
 
@@ -66,30 +73,16 @@ import avs.sistemaavs.model.*;
 public class ControladoraLocacao {
 	Cliente c1 = null, c2 = null;
 	ControladoraBusca b = new ControladoraBusca();
-	//classe inchada
-	//comentarios
 	
-	
-	//comentarios
-	//metodo longo
-	//campo temporario
 	public void realizarLocacao(Locadora locadora, ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS){
 		ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
 		if(verificarPendenciasCliente(locadora, numeroCartaoAVS, controladoraDevolucao)){
 			if(verificarVideos(locadora, numeroCatalogoFilmes)){
-				/*
-				 * Campo temporário valorDevido substituido por query
-				 */
+				
 				Aluguel aluguel = new Aluguel(calcularDataDevolucao(), numeroCatalogoFilmes, numeroCartaoAVS, calcularTaxaLocacao(numeroCatalogoFilmes));
-				/*
-				 * Metodo atualizarValorDevido extraido
-				 */
-				//
+				
 				atualizarValorDevido(locadora, numeroCatalogoFilmes, numeroCartaoAVS);
-				/*
-				 * Metodo adicionarAluguelEmLocadora extraído
-				 */
-				//adicionar aluguel a lista de Alugueis da Locadora
+				
 				adicionarAluguelEmLocadora(locadora, aluguel);
 			}
 		}
@@ -104,11 +97,7 @@ public class ControladoraLocacao {
 		c1.setValorDevido(calcularTaxaLocacao(numeroCatalogoFilmes));
 	}
 	
-	/*
-	 * Metodos clienteExiste e clienteSemPendencias extraídos
-	 * queries clienteExiste e clienteSemPendencias substituidas
-	 */
-	//fazer dos metodos de condicionais privados
+	
 	private boolean verificarPendenciasCliente(Locadora locadora, int numeroCartaoAVS, ControladoraDevolucao controladoraDevolucao) {
 		return clienteExiste(locadora, numeroCartaoAVS) && clienteSemPendencias(locadora,numeroCartaoAVS, controladoraDevolucao);
 	}
@@ -121,9 +110,7 @@ public class ControladoraLocacao {
 		return verificarCliente(locadora, numeroCartaoAVS);
 	}
 
-	/*
-	 * Metodo contarVideos extraido, variavel temporaria numeroVideos substituida por query
-	 */
+	
 	public double calcularTaxaLocacao(ArrayList<Integer> numeroCatalogoFilmes){
 		return contarVideos(numeroCatalogoFilmes) *2.0;
 	}
@@ -146,20 +133,16 @@ public class ControladoraLocacao {
 		return dataDevolucao;
 	}
 
-	/*
-	 * Metodo atualizarQuantidadeVideos extraido
-	 */
+	
 	public boolean verificarVideos(Locadora locadora, ArrayList<Integer> numeroCatalogoFilmes){
-		//codigo duplicado
+		
 		Iterator<Integer> it = b.BuscaNumeroCatalogo(numeroCatalogoFilmes); 
-		//verificar a disponibilidade de videos no estoque
+		
 		return atualizarQuantidadeVideos(locadora, it);
 
 	}
 
-	/*
-	 * Metodo setarQuantidadeVideos extraida
-	 */
+	
 	public boolean atualizarQuantidadeVideos(Locadora locadora, Iterator<Integer> it) {
 		while(it.hasNext()){
 			Integer numeroCatalogo = it.next();
@@ -270,3 +253,12 @@ public class TestControladoraLocacao {
 
 }
 }}}
+
+------------
+= Referências =
+
+[http://www.junit.org Site oficial do JUnit]
+
+[http://pt.wikipedia.org/wiki/JUnit Wikipédia]
+
+[http://junit.sourceforge.net/doc/cookstour/cookstour.htm Manual JUnit] 
