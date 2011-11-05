@@ -1,6 +1,6 @@
  * [UserStories User Stories]
  * [TestesUnitarios Testes Unitários]
-    * [ArticlesDom DOM manipulation]
+ * [TestesAceitacao Testes de Aceitação]
     * [ArticlesStyle CSS and style]
     * [ArticlesTips Tips and tricks]
   * [DOMReference DOM reference]
