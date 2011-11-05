@@ -125,5 +125,170 @@ Small
 Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
 
 
+Testable
 
 [http://code.google.com/p/extreme-programming-mds/source/browse/wiki/testable.jpg]
+
+--------------
+Escrevendo User Stories
+
+Especificando o ator, a ação e a funcionalidade desejada
+
+---------------
+Testes de aceitação
+
+ * Os testes de aceitação têm a finalidade de confirmar que o sistema funciona de acordo com a especificação. 
+ * A cada estória estão associados um conjunto de testes de aceitação, que devem ser definidos pelo cliente, antes da construção da estória.  
+ * O nome, testes de aceitação, tem como objetivo indicar que estes são os testes que o cliente definiu como sendo necessários o sistema passar de modo a que a história possa ser dada como concluída.
+
+== Exemplo ==
+
+{{{
+“Um cliente deve registrar-se indicando como código de utilizador o e-mail e escolhendo uma palavra-chave alfa-numérica." 
+}}}
+
+Que testes de aceitação podemos definir? 
+
+
+{{{
+"Uma palavra-chave não deve aceitar caracteres que não os A-Z, a-z e 0-9." 
+}}}
+
+
+"Depois de registrado, o cliente deve receber uma confirmação provisória do registro."  
+
+----------
+== Card ===
+
+*Frente*
+||*US01* ||
+||Um cliente deve registrar-se indicando como código de utilizador o e-mail e escolhendo uma palavra-chave alfa-numérica.||
+
+*Verso*
+||Critérios para aceitação||
+|| Uma palavra-chave não deve aceitar caracteres que não sejam os A-Z, a-z e 0-9. Depois de registrado, o cliente deve receber uma confirmação provisória do registro.||
+
+
+------
+     Testes de Aceitação
+
+Algumas perguntas podem ser feitas quanto a usabilidade dessa funcionalidade, como por exemplo:
+Como o usuário fará essa busca no sistema?
+Como o usuário deseja que seja apresentada a informação solicitada?
+O que deve ser feito se o livro não for encontrado?
+
+------
+CRC Card
+
+
+
+• Class
+– Qual o nome da classe e a classificação?
+
+• Responsibility
+– Qual a responsabilidade da classe?
+
+• Collaboration
+– Quais classes se comunicam entre si?
+
+------
+
+Exemplo: MVC
+
+
+
+-----
+Como extrair classes e responsabilidades?
+
+• Procurando classes
+– Extração de substantivos
+
+• Procurando responsabilidades
+– Extração de verbos
+
+--------
+Exemplo Prático
+
+-----
+User Stories
+
+US01 – Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes.
+US02 – Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.
+US03 – Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da devolução dos vídeos.
+US04 – Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos.
+US05 – Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso.
+
+-----
+
+User Stories
+
+||US01||
+||Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes||
+
+||Critérios para aceitação||
+|| Cada vídeo cadastrado deve ter um ID associado
+ Para cada vídeo deve ser possível cadastrar o nome, o ano, o gênero, a categoria e a quantidade existente||
+
+||US02||
+||Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.||
+
+||Critérios para aceitação||
+|| Cada cliente deve ter um cartão identificador associado
+ Para cada cliente deve ser possível cadastrar nome, telefone, endereço, CPF e RG||
+
+||US03||
+||Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos||
+
+||Critérios para aceitação||
+|| Os vídeos com dois ou mais dias de atraso devem ser destacados||
+
+||US04||
+||Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos||
+
+||Critérios para aceitação||
+|| Cada cartão deve ter um identificador único||
+
+||US05||
+||Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso||
+
+||Critérios para aceitação||
+|| Cada cliente pode alugar no máximo cinco vídeos por vez
+ Os vídeos podem ser alugados por no máximo três dias
+ O cliente só poderá alugar vídeos se não tiver vídeos pendentes para devolução
+ Caso o cliente tenha vídeos pendentes ele deverá pagar uma extra antes de poder alugar mais vídeos
+ O cliente só poderá alugar vídeos se não tiver débito pendente||
+
+---------
+CRC Cards
+
+US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes
+
+Substantivos: gerente, vídeos, locadora
+Verbos: manter, catalogar
+
+*Gerente*
+||Responsabilidades||||Colaboração||
+||Imprimir relatórios||||Locadora||
+
+*Video*
+||Responsabilidades||||Colaboração||
+||Descrever características dos vídeos||||Locadora||
+
+*Video*
+||Responsabilidades||||Colaboração||
+||Manter dados de clientes, de vídeos e de aluguéis||||Vídeo, Gerente, Cliente, Aluguel||
+
+
+
+--------
+Referências
+
+[http://www.agilemodeling.com/artifacts/userStory.htm#Figure1 Agile Modeling, Introduction to User Stories]
+
+[http://blog.scrumhalf.com.br/2011/10/user-stories-o-que-sao-como-usar/ Blog ScrumHalf, User Stories – O que são? Como Usar?]
+
+[http://blog.scrumhalf.com.br/2011/10/criterios-de-aceitacao-das-user-stories/ Blog ScrumHalf, Critérios de Aceitação das User Stories]
+
+[http://radlab.cs.berkeley.edu/w/upload/3/36/UserStories.pdf Rad Lab, UC Berkeley. User Stories and Design, 2007]
+
+[http://www.mountaingoatsoftware.com/system/presentation/file/35/UserStoriesXPAtlanta.pdf Montain Got Software, User Stories Applied for Agile Software Development]
