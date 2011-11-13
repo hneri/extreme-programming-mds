@@ -3,3 +3,22 @@
 Um teste formal realizado para determinar se o sistema satisfaz ou não os critérios de aceitação determinados e para permitir ao cliente decidir se aceita ou não o sistema.
 São originalmente chamados de Testes Funcionais, pois cada teste de aceitação testa uma funcionalidade de uma [UserStories User Story]. Testes de Aceitação são diferentes dos [TestesUnitarios Testes Unitários] que são escritos pelos desenvolvedores, enquanto que os Testes de Aceitação devem ser escritos pelo Cliente.
 Os Testes de Aceitação foram propostos por [http://www.threeriversinstitute.org/blog/ Kent Beck] em uma votação na [http://c2.com/xp/XpMailingList.html XpMailingList] no começo de abril de 2000. Aprovado pela comissão, agora é um padrão em [eXtremeProgramming XP]. 
+
+---------------
+
+== Definição ==
+
+Um teste formal realizado para determinar se o sistema satisfaz ou não os Critérios de Aceitação determinados e para permitir ao cliente decidir se aceita ou não o sistema. São originalmente chamados de *Testes Funcionais*, pois cada teste de aceitação testa uma funcionalidade de uma [UserStories User Story].
+
+ * Cada caso de teste consiste de uma sequência de passos que irão simular a [UserStories User Story] que deve ser testada e são desenvolvidos a partir dos Critérios de Aceitação. 
+ * Contem dados de entrada (se necessários) e a saída esperada.
+ * Os casos de testes aprovados serão a medida da completude de uma [UserStories User Story] que não pode ser considerada completa antes de todos os testes de aceitação associados a ela terem passado.
+ * Quando existem longas iterações com várias semanas é fácil perder o foco inicial, testes de aceitação que foram feitos para cada [UserStories User Story] no começo de cada iteração ajuda os desenvolvedores a manter o desenvolvimento de acordo com as expectativas do cliente.
+ * Testes de aceitação servem como um excelente guia para os desenvolvedores para interpretarem melhor os requisitos de cada [UserStories User Story].
+
+
+------------
+Um Teste de Aceitação deve ter os seguintes objetivos:
+ * Verificar e validar se a User Story foi implementada como deveria;
+ * Os desenvolvedores devem ser capazes de verificar se o que desenvolveram está de acordo com os requisitos;
+ * Determinar se o produto desenvolvimento atende as expectativas do usuário final.
