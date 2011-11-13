@@ -23,15 +23,14 @@ Um teste formal realizado para determinar se o sistema satisfaz ou não os Crit�
  * Os desenvolvedores devem ser capazes de verificar se o que desenvolveram está de acordo com os requisitos;
  * Determinar se o produto desenvolvimento atende as expectativas do usuário final.
 -----------
-= Como Testar? = 
+== Como Testar? == 
 
 Os Testes de Aceitação são um tipo de teste caixa preta. O foco é a funcionalidade e a usabilidade da aplicação e não os aspectos técnicos. 
 
 Testes de Aceitação geralmente envolvem um ou mais das seguintes atividades:
-.......1) Planejamento dos Testes de Aceitação do Usuário (UAT) 
-.......2) Escrita dos Testes de Aceitação do Usuário
-.......3) Seleção dos envolvidos na execução dos Testes de Aceitação do Usuário
-.......4) Execução dos Testes de Aceitação do Usuário
-.......5) Documentação dos defeitos encontrados
-.......6) Correção dos bugs
-.......7) Sign Off
+ # Planejamento dos Testes de Aceitação do Usuário (UAT) 
+ # Escrita dos Testes de Aceitação do Usuário
+ # Seleção dos envolvidos na execução dos Testes de Aceitação do Usuário
+ # Execução dos Testes de Aceitação do Usuário
+ # Documentação dos defeitos encontrados
+ # Correção dos bugs
