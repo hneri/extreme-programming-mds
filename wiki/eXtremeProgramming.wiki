@@ -6,3 +6,4 @@
   * [Refatoracao Refatoração]
   * [PadroesCodificacao Padrões de Codificação]
   * [CoberturaCodigo Cobertura de Código]
+ * [Ferramentas Manual de Ferramentas]
