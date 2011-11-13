@@ -1,6 +1,6 @@
 = Testes Unitários =
 
-Os testes que você precisa escrever em XP são isolados e automáticos. Nenhum teste interage com os outros que você escreve. Dessa forma você evita o problema de que um teste falhe e cause centenas de outras falhas. Os testes também são automáticos. Os testes são mas valiosos quando o nível de estresse aumenta, quando as pessoas estão trabalhando demais, quando o julgamento humano começa a falhar. Logo, os testes precisam ser automáticos - retornando um indicativo não-qualificativo, do tipo polegar para cima, polegar para baixo, de como o sistema está se comportando.
+Os testes que você precisa escrever em XP são isolados e automáticos. Nenhum teste interage com os outros que você escreve. Dessa forma você evita o problema de que um teste falhe e cause centenas de outras falhas. Os testes também são automáticos. Os testes são mais valiosos quando o nível de estresse aumenta, quando as pessoas estão trabalhando demais, quando o julgamento humano começa a falhar. Logo, os testes precisam ser automáticos - retornando um indicativo não-qualificativo, do tipo polegar para cima, polegar para baixo, de como o sistema está se comportando.
 
 Os programadores escrevem os testes método a método. Um programador escreve um teste sob as seguintes circunstâncias:
 
