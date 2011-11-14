@@ -34,3 +34,5 @@ Testes de Aceitação geralmente envolvem um ou mais das seguintes atividades:
  # Execução dos Testes de Aceitação do Usuário
  # Documentação dos defeitos encontrados
  # Correção dos bugs
+---------
+== Exemplo - Sistema AVS==
