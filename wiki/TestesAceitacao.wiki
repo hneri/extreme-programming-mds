@@ -36,3 +36,28 @@ Testes de Aceitação geralmente envolvem um ou mais das seguintes atividades:
  # Correção dos bugs
 ---------
 == Exemplo - Sistema AVS==
+--------
+
+== US01 ==
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_021.png]
+---------------
+
+== US02 ==
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_022.png]
+
+---------------
+== US03 ==
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_023.png]
+
+---------------
+== US04 ==
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_024.png]
+
+---------------
+== US05 ==
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_025.png]
+
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_026.png]
+
+[extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_027.png]
+---------------
