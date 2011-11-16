@@ -12,6 +12,12 @@ Os programadores escrevem os testes método a método. Um programador escreve um
 
 Os testes de unidade escritos pelo programador sempre executam a 100%. Se um dos testes de unidade falha, ninguém no time tem um trabalho mais importante do que consertar os testes. Isso porque, se um teste está falhando, você tem uma quantidade desconhecida de trabalho a fazer para consertá-lo. Pode levar apenas um minuto, mas também pode durar um mês.
 
+
+-----------------
+==Algumas palavras de Beck e Gamma==
+
+Sometimes you just won't feel like writing tests, especially at first. Don't. However, pay attention to how much more trouble you get into, how much more time you spend debugging, and how much more stress you feel when you don't have tests. We have been amazed at how much more fun programming is and how much more aggressive we are willing to be and how much less stress we feel when we are supported by tests. The difference is dramatic enough to keep us writing tests even when we don't feel like it.
+
 -----------------
 
 == Testes Unitários com JUnit ==
