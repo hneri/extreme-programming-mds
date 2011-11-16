@@ -16,7 +16,6 @@ O termo em inglês é *story* (estória – conto) e não *history* (história -
 
 == O que não são: ==
  * Documentos de implementação
- * Documentação de requisitos
  * Imutáveis
 
 -----
