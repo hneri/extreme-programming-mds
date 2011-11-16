@@ -107,7 +107,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
 *Estórias não são imutáveis*
 
- * Elas representam uma conversa, não um requisito
+ * Elas representam uma conversa
 
 – Conversas podem ser resumidas
 
