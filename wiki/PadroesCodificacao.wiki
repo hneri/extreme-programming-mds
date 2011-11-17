@@ -1,13 +1,19 @@
-== Padrões de Codificação ==
+= Padrões de Codificação =
 
-= Introduction =
+Um cenário no qual vários programadores trabalhando em tantas partes diferentes do sistema, trocando de dupla várias vezes por dia e refatorando os códigos uns dos outros constantemente não pode ter conjuntos diferentes de práticas de codificação. O padrão adotado deve exigir a menor quantidade de trabalho possível, consistente com a regra do "uma e somente uma vez" (sem código duplicado). O padrão deve enfatizar a comunicação. Finalmente, o padrão deve ser adotado voluntariamente por todo o time.
 
-Add your content here.
+A organização do código fonte facilita os processos de desenvolvimento, retirada de bugs, atividades de validação e manutenção.  O uso de um padrão de codificação também aumenta a produtividade num projeto, uma vez que a comunicação dentro da equipe de desenvolvimento fica mais fácil, mas vale ressaltar que partes desses padrões são vistas, algumas vezes, como sugestões por empresas que adotam seus próprios padrões.
 
+--------------
+== Consistência ==
+O código produzido utilizando padrões deve ser a marca da equipe e não o código produzido pelo Joãozinho ou a Mariazinha. Deve-se ter o entendimento de que qualquer um dentro da equipe pode ter desenvolvido aquele código, sem que se faça distinção de quem o escreveu.
+Uncle Bob escreve muito bem essa definição ao afirmar que "Esta não é a fantasia de igualdade para que se possa sobrepujar a individualidade em detrimento do grupo, é uma necessidade básica". Como todo indivíduo possui seus próprios vícios e fetiches relacionados ao desenvolvimento, imagine 10 programadores trabalhando num mesmo código ao longo do projeto. Conforme o tempo passa, a mistura de padrões e estilos diferentes dentro do código tornará impossível sua leitura.
 
-= Details =
+== Estilo ==
+Sim, uma parte importante do processo de desenvolvimento. Muitos podem se perguntar: "Qual a utilidade de definir o número de espaços que o tab representa? Por que determinar a identação correta para todos da equipe??". Falo aqui apenas da forma, não do conteúdo.
+E neste ponto é importante diferenciar estilo de consistência pois eles existem para diferentes motivos. E graças a Deus nós temos o Eclipse e a capacidade de exportar um padrão determinado para arquivos xml que serão importados pelos outros desenvolvedores.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+-----------
+= Referências =
+
+[http://malditacomedia.blogspot.com/2007/09/entre-padres-de-cdigo-e-programao.html Maldita Comédia - Entre Padrões de Código e a Programação Literária]
