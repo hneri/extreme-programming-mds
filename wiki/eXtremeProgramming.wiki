@@ -4,4 +4,5 @@
   * [TestesAceitacao Testes de Aceitação]
   * [Refatoracao Refatoração]
   * [IntegracaoContinua Integração Contínua]
+  * [PadroesCodificacao Padrões de Codificação]
  
