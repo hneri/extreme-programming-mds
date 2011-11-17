@@ -1,13 +1,27 @@
-#summary One-sentence summary of this page.
+= Integração Contínua = 
 
-= Introduction =
+É uma das práticas da [XP eXtreme Programming] na qual o código é integrado e testado após algumas horas - no máximo um dia de desenvolvimento. Integrar apenas um conjunto de modificações de cada vez é uma prática que funciona bem porque fica óbvio quem deve fazer as correções quando um teste falha.  
+Tecnicamente, o termo "Integração Contínua" significa que odos do time integram as suas mudanças no repositório frequentemente, verificando se com as mudanças feitas os testes continuam passando 100%. A definição e configuração exata para os termos "Integração Contínua" depende do time que deve definir como e com qual frequência a integração deverá ser feita. Aqui será discutida a Integração Contínua de forma automatizada.
 
-Add your content here.
 
+There are some very convincing benefits a development team can gain from using Continuous Integration. Some of those benefits can really be understood only by experiencing it for real, but I'll try my best to convey the most important ones right now, before we get into the "how" part and get our hands all dirty.
 
-= Details =
+Remember when I just said that Continuous Integration aims to provide fast feedback? Let me tell you a little story to explain what I'm talking about.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+A friend of mine joined a small software development team that had a relatively long history behind it, having produced a number of bi-yearly releases of an in-house project management software. The codebase was relatively big and messy, the developers were unfamiliar with some of the worst spider webs, the build process took ages, and the testing team was often faced with a broken build that couldn't be tested beyond the first screen or so.
+
+Fortunately, the team had gotten a configuration manager, another friend of mine, with enough energy and will to make things better and the team decided to try something new. That something was Continuous Integration.
+
+The configuration manager set up an automated build system that periodically, once every hour, checked out the latest version of all files in the version control and ran the build script, effectively attempting to compile all code and run any automated tests it could find. The build system would send an email to each and every member of the development team whenever the automated build failed.
+
+Obviously the build system was constantly sending out those build failure emails to the whole team as people repeatedly forgot to check in all their changes, failed to compile the source code locally after a small edit, and neglected running the automated tests before checking in.
+
+What was the team's reaction to this new stream of nasty emails complaining about even the smallest error they could make? Yes, you guessed correctly. The team members asked the configuration manager to stop running the automated build so frequently, arguing that their mailboxes were so full of "build failed" emails that they couldn't do any real work from deleting all that spam. After all, they knew the build is broken already from the first copy of that email so there was no need to send another one.
+
+This reaction was no surprise, considering how annoying it is to get the same whining email an hour after hour. So, how did the configuration manager react to this sudden burst of dissatisfaction? He scheduled the automatic builds to run twice as often as they used to.
+
+My friend -- not the configuration manager, the other one -- told me that that was the moment when he realized how wonderful Continuous Integration actually was. The revelation he had at that time was that the purpose of a Continuous Integration system is not just to inform the developers about the build being broken but to keep the build from being broken for extended periods of time. Keeping the build green.
+
+Eventually, after a day or two of constant nagging about the annoyance, it all suddenly stopped. No "build failed" messages twice in an hour, no whining about getting "spammed", no nothing. The build had started to stay green. Of course the build broke every now and then, but it had become an exception instead of the rule and the developers started to value those "build failed" messages as valuable feedback instead of worthless spam. I've heard of developers initially creating mail filters to send anything coming from the build machine to the trash folder only to find themselves addicted to the invaluable feedback a Continuous Integration system can provide.
+
+To me, all this seems to be convincing evidence about there being something about Continuous Integration that is worth exploring further. If you feel the same, please continue reading.
