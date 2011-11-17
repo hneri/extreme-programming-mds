@@ -73,6 +73,22 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png]
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png]
 -----------
+== Exemplos ==
+
+*Extração de método: *
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_011.png]
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_012.png]
+
+A dica para a operação de extração de métodos é fazer com que cada método tenha uma única responsabilidade.
+----
+
+== Exemplo Prático - [http://code.google.com/p/sistemaavs-mds-01/ Sistema AVS] ==
+
+
+
+------
 == Referências ==
 
  # [http://books.google.com/books?id=1MsETFPD3I0C&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false Fowler, Martin. Refactoring: Improving the Design of Existing Code. Addison-Wesley, 1999]
