@@ -27,8 +27,20 @@ Nesse modelo, o desenvolvedor integra seu código, executando um subconjunto dos
 Depois disso, uma ferramenta de apoio à integração contínua assíncrona, como o [CruiseControl Cruise Control], monitora o repositório permanentemente. Sempre que detecta mudanças (porque alguém fez um commit), o [CruiseControl Cruise Control] faz checkout de todo o projeto automaticamente, pode usar, como exemplo, o [Maven Maven] para gerenciar o build do projeto e executar todos os testes. Quando ocorre algum erro de compilação, de merge ou na execução dos testes, a ferramenta envia um e-mail para o desenvolvedor responsável pelo problema. O desenvolvedor, por sua vez, deve fazer as correções o mais brevemente possível e colocá-las no repositório.
 
 ---------
+== Processo de Integração Contínua ==
+
+[http://siep.ifpe.edu.br/anderson/blog/wp-content/uploads/2010/08/Processo_de_IC.jpg]
+
+O cenário acima pode ser descrito como: 
+ # O desenvolvedor envia o código para o controle de versão (SVN, CVS, etc). Enquanto isso a máquina de integração (servidor de Integração Contínua) está verificando o repositório buscando por modificações
+ # Logo após um commit ser efetuado, o servidor ao verificar que alguma mudança ocorreu no repositório inicia o processo de build baixando os arquivos do Servidor de Controle de Versão. Assim, o script de build é executado, testes são realizados, relatórios gerados, e todo o projeto é integrado.
+ # O Servidor de Integração envia por e-mail ou outros dispositivos o feedback sobre build para usuários específicos do projeto
+ # O servidor volta ao estado de Poll buscando por mudanças no repositório
+---------
 = Referências =
 
  # [http://martinfowler.com/articles/continuousIntegration.html Continuous Integration, Martin Fowler]
  # [http://blog.caelum.com.br/integracao-continua/ Integração Contínua, Caelum]
  # [http://improveit.com.br/xp/praticas/integracao Integração Contínua, ImproveIT]
+
+ # [http://www.amazon.com/gp/product/0321336380?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321336380 Continuous Integration: Improving Software Quality and Reducing Risk, Paul M. Duvall, Steve Matyas, Andrew Glover]
