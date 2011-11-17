@@ -139,7 +139,7 @@ Descrição das principais operações de Refatoração que são aplicadas quand
  # Condicional complicada
 
 
-Como se repetia várias vezes em todo o código o uso de iteradores para buscar atributos de clientes, vídeos e aluguéis tal característica foi extraída para a classe ControladoraBusca.java que tem métodos faz todos os tipos de busca e retorna o objeto procurado. A operação de refatoração para tal extração foi a Extração de Classe e em termos de projeto caracterizou um padrão GRASP chamado Invenção Pura.
+Como se repetia várias vezes em todo o código o uso de iteradores para buscar atributos de clientes, vídeos e aluguéis tal característica foi extraída para a classe ControladoraBusca que tem métodos que fazem todos os tipos de busca e retornam o objeto procurado. A operação de refatoração para foi a Extração de Classe e em termos de projeto caracterizou um padrão GRASP chamado Invenção Pura.
 ---------
 
 ===Método refatorado:===
