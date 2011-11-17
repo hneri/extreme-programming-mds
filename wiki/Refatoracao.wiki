@@ -1,5 +1,6 @@
 = Refatoração = 
 
+ * É uma das práticas da [XP eXtreme Programming] na qual os programadores reestruturam o sistema sem alterar seu comportamento a fim de remover duplicidade, melhorar a comunicação, simplificar e acrescentar flexibilidade.
  * Refatoração é o processo de modificar um sistema de software de tal modo que não altere o comportamento externamente observável e ainda melhora sua estrutura interna (Fowler, 99).
  * É um modo disciplinado de limpar o código e que minimiza as chances de introduzir bugs (Fowler, 99).
  * De fato, ao refatorar você melhora o código e seu projeto depois deles terem sido escritos. 
@@ -10,7 +11,18 @@ Em um desenvolvimento “tradicional”, inicialmente é feito o projeto e poste
 Com Refatoração, atividades de projeto são constantes durante o desenvolvimento do software. O efeito cumulativo dessas mudanças é que promoverá melhorias significativas no projeto.
 
 ----
+Em um cenário de [XP eXtreme Programming] seria impossível refatorar o projeto do sistema frequentemente. Demoraria muito tempo, seria muito difícil controlar e provavelmente estragaria o sistema. A não ser que:
 
+ * Você esteja acostumado à propriedade coletiva, não se importante em fazer mudanças sempre que necessário;
+ * Você tenha padrões de codificação, não sendo preciso reformatar antes de refatorar;
+ * Você programe em pares, tornando mais provável que você tenha a coragem de enfrentar uma refatoração complicada e menos provável que você estrague algo;
+ * Você tenha um projeto simples, tornando a refatoração mais fácil;
+ * Você tenha testes, fazendo com que seja menos provável que você estrague algo sem perceber;
+ * Você tenha integração frequente, de movo que, se você acidentalmente estragar algo sem perceber, ou se uma de suas refatorações entrar em conflito com o código de outra pessoa, você ficará sabendo em poucas horas;
+ * Você esteja tranquilo, o que lhe dará mais coragem e diminuirá a probabilidade de cometer erros.
+
+Dessa forma, talvez seja possível refatorar sempre que você perceber uma oportunidade de simplificar o sistema, de reduzir as duplicações e de comunicar algo mais claramente.
+----
 
 == Resumo dos principais tópicos relacionados a Refatoração ==
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png]
@@ -62,3 +74,8 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png]
 -----------
 == Referências ==
+
+ # [http://books.google.com/books?id=1MsETFPD3I0C&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false Fowler, Martin. Refactoring: Improving the Design of Existing Code. Addison-Wesley, 1999]
+ # [http://pt.wikipedia.org/wiki/Refatora%C3%A7%C3%A3o Wikipédia - Refatoração]
+ # [http://books.google.com.br/books?id=xWWPkGLIuxMC&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false Beck, Kent. Programação Extrema Explicada: Acolha as mudanças. Bookman, 2004.]
+ # Material de aula da disciplina de Desenvolvimento Avançado de Software do professor [https://twitter.com/#!/andreperon André Luiz Peron Martins Lanna].
