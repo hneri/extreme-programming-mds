@@ -184,8 +184,8 @@ public Aluguel realizarLocacao(Locadora locadora,
     }
 }}}
 
-
-=== Método extraído ====
+---------------------
+=== Métodos extraídos ====
 
 * Para a própria classe: *
 {{{
