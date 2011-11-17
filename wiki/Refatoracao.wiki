@@ -90,7 +90,7 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 
 == Exemplo Prático - [http://code.google.com/p/sistemaavs-mds-01/ Sistema AVS] ==
 
-* Método que realiza a locação de vídeos: *
+=== Método que realiza a locação de vídeos: ===
 
 {{{
 	//mau cheiro: metodo longo
@@ -131,15 +131,15 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 		}
 	}
 }}}
-
-Maus cheiros encontrados: 
+-----------
+===Maus cheiros encontrados: ===
  # Método longo
  # Campo temporário
  # Comentários
  # Condicional complicada
+---------
 
-
-Método refatorado:
+===Método refatorado:===
 
 {{{
 public Aluguel realizarLocacao(Locadora locadora,
