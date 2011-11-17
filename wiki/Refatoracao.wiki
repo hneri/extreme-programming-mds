@@ -206,7 +206,7 @@ public Aluguel realizarLocacao(Locadora locadora,
     }
 }}}
 
-* Para a classe ControladoraBusca.java: *
+* Para a classe ControladoraBusca: *
 
 {{{
   public Cliente BuscaCliente(Locadora locadora, Cliente cliente,
