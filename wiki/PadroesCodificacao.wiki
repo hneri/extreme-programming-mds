@@ -23,5 +23,5 @@ O plugin usado para o exemplo foi o [http://jalopy.sourceforge.net/index.html Ja
 -----------
 = Referências =
 
-[http://malditacomedia.blogspot.com/2007/09/entre-padres-de-cdigo-e-programao.html Maldita Comédia - Entre Padrões de Código e a Programação Literária]
+ # [http://malditacomedia.blogspot.com/2007/09/entre-padres-de-cdigo-e-programao.html Maldita Comédia - Entre Padrões de Código e a Programação Literária]
  # [http://books.google.com.br/books?id=xWWPkGLIuxMC&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false Beck, Kent. Programação Extrema Explicada: Acolha as mudanças. Bookman, 2004.]
