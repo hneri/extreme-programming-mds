@@ -75,19 +75,103 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 -----------
 == Exemplos ==
 
-*Extração de método: *
+=== Extração de método:  ===
+
+*Antes da operação de refatoração:*
 
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_011.png]
 
+*Depois da refatoração:*
+
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_012.png]
 
-A dica para a operação de extração de métodos é fazer com que cada método tenha uma única responsabilidade.
+*A dica para a operação de extração de métodos é fazer com que cada método tenha uma única responsabilidade.*
 ----
 
 == Exemplo Prático - [http://code.google.com/p/sistemaavs-mds-01/ Sistema AVS] ==
 
+* Método que realiza a locação de vídeos: *
+
+{{{
+	//mau cheiro: metodo longo
+	//mau cheiro: comentarios
+	public void realizarLocacao(Locadora locadora,
+			ArrayList<Integer> numeroCatalogoFilme, int numeroCartaoAVS) {
+		ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
+	
+		//verificar se o cliente existe e se tem pendencias
+		
+		//mau cheiro: condicional complicada
+		if ((verificarCliente(locadora, numeroCartaoAVS) == true)
+				&& (controladoraDevolucao.verificarPendencia(locadora,
+						numeroCartaoAVS) == 1)) {
+			
+		
+			//verificar se o video esta disponivel
+			
+			//mau cheiro: campo temporario
+			String verificacao = verificarVideos(locadora, numeroCatalogoFilme);
+			if (verificacao == "disponivel") {
+				double valorDevido = calcularTaxaLocacao(numeroCatalogoFilme);
+				Aluguel aluguel = new Aluguel(calcularDataDevolucao(),
+						numeroCatalogoFilme, numeroCartaoAVS, valorDevido);
+				
+				//atualizar o valor devido do cliente
+				for (Iterator<Cliente> it = locadora.getCliente().iterator(); it
+						.hasNext();) {
+					Cliente cl = (Cliente) it.next();
+					if (numeroCartaoAVS == cl.getNumeroCartaoAVS()
+							.getIdentificador()) {
+						cl.setValorDevido(valorDevido);
+						break;
+					}
+				}
+				locadora.getAluguel().add(aluguel);
+			}
+		}
+	}
+}}}
+
+Maus cheiros encontrados: 
+ # Método longo
+ # Campo temporário
+ # Comentários
+ # Condicional complicada
 
 
+Método refatorado:
+
+{{{
+public Aluguel realizarLocacao(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS) {
+        ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
+
+        if (verificarPendenciasCliente(locadora, numeroCartaoAVS,
+                    controladoraDevolucao)) {
+            if (verificarVideos(locadora, numeroCatalogoFilmes)) {
+                /*
+                 * Campo temporário valorDevido substituido por query
+                 */
+                Aluguel aluguel = new Aluguel(calcularDataDevolucao(),
+                        numeroCatalogoFilmes, numeroCartaoAVS,
+                        calcularTaxaLocacao(numeroCatalogoFilmes));
+                /*
+                 * Metodo atualizarValorDevido extraido
+                 */
+
+                //
+                atualizarValorDevido(locadora, numeroCatalogoFilmes,
+                    numeroCartaoAVS);
+                /*
+                 * Metodo adicionarAluguelEmLocadora extraído
+                 */
+
+                adicionarAluguelEmLocadora(locadora, aluguel);
+
+                return aluguel;
+            }
+        }
+}}}
 ------
 == Referências ==
 
