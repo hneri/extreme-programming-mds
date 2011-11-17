@@ -48,9 +48,13 @@ Este julgamento vem na medida em que o projetista ganha familiaridade com as ope
  # Herança negada: Subclasses herdam métodos e dados de suas classes-pai, mas nem sempre gostariam de herdá-los. Nesses casos há um indício claro que a hierarquia está errada. 
 
 -----------
-== Maus cheiros e operações de refatoração == 
+== Maus cheiros e operações de Refatoração == 
 
-Descrição das principais operações de refatoração que são aplicadas quando os maus cheiros de código são encontrados.
+Descrição das principais operações de Refatoração que são aplicadas quando os maus cheiros de código são encontrados.
 
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png]
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png]
+-----------
+
+== Resumo dos principais tópicos relacionados a Refatoração ==
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png]
