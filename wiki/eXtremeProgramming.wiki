@@ -2,4 +2,5 @@
   * [UserStories User Stories]
   * [TestesUnitarios Testes Unitários]
   * [TestesAceitacao Testes de Aceitação]
+  * [Refatoracao Refatoração]
  
