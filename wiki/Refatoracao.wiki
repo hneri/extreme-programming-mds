@@ -137,6 +137,9 @@ Descrição das principais operações de Refatoração que são aplicadas quand
  # Campo temporário
  # Comentários
  # Condicional complicada
+
+
+Como se repetia várias vezes em todo o código o uso de iteradores para buscar atributos de clientes, vídeos e aluguéis tal característica foi extraída para a classe ControladoraBusca.java que tem métodos faz todos os tipos de busca e retorna o objeto procurado. A operação de refatoração para tal extração foi a Extração de Classe e em termos de projeto caracterizou um padrão GRASP chamado Invenção Pura.
 ---------
 
 ===Método refatorado:===
@@ -148,10 +151,15 @@ public Aluguel realizarLocacao(Locadora locadora,
 
         if (verificarPendenciasCliente(locadora, numeroCartaoAVS,
                     controladoraDevolucao)) {
+        	
+             /*
+             * Campo temporário valorDevido substituido por query
+             */
+        	/*
+        	 * Condicional complicada extraída para método verificarVideos
+        	 */
             if (verificarVideos(locadora, numeroCatalogoFilmes)) {
-                /*
-                 * Campo temporário valorDevido substituido por query
-                 */
+                
                 Aluguel aluguel = new Aluguel(calcularDataDevolucao(),
                         numeroCatalogoFilmes, numeroCartaoAVS,
                         calcularTaxaLocacao(numeroCatalogoFilmes));
@@ -166,11 +174,56 @@ public Aluguel realizarLocacao(Locadora locadora,
                  * Metodo adicionarAluguelEmLocadora extraído
                  */
 
-                adicionarAluguelEmLocadora(locadora, aluguel);
+               locadora.getAluguel().add(aluguel);
 
                 return aluguel;
             }
         }
+
+        return null;
+    }
+}}}
+
+
+=== Método extraído ====
+
+* Para a própria classe: *
+{{{
+  private void atualizarValorDevido(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS) {
+        c1 = b.BuscaCliente(locadora, c2, numeroCartaoAVS);
+        c1.setValorDevido(calcularTaxaLocacao(numeroCatalogoFilmes));
+    }
+}}}
+
+{{{
+ public boolean verificarVideos(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes) {
+       
+        Iterator<Integer> it = b.BuscaNumeroCatalogo(numeroCatalogoFilmes);
+
+        return atualizarQuantidadeVideos(locadora, it);
+    }
+}}}
+
+* Para a classe ControladoraBusca.java: *
+
+{{{
+  public Cliente BuscaCliente(Locadora locadora, Cliente cliente,
+        int numeroCartaoAVS) {
+        for (Iterator<Cliente> it = locadora.getCliente().iterator();
+                it.hasNext();) {
+            cliente = it.next();
+
+            if (numeroCartaoAVS == cliente.getNumeroCartaoAVS()
+                                              .getIdentificador()) {
+
+                return cliente;
+            }
+        }
+
+        return null;
+    }
 }}}
 ------
 == Referências ==
