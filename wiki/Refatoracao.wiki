@@ -49,3 +49,8 @@ Este julgamento vem na medida em que o projetista ganha familiaridade com as ope
 
 -----------
 == Maus cheiros e operações de refatoração == 
+
+Descrição das principais operações de refatoração que são aplicadas quando os maus cheiros de código são encontrados.
+
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png]
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png]
