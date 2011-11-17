@@ -43,3 +43,4 @@ O cenário acima pode ser descrito como:
  # [http://blog.caelum.com.br/integracao-continua/ Integração Contínua, Caelum]
  # [http://improveit.com.br/xp/praticas/integracao Integração Contínua, ImproveIT]
  # [http://www.amazon.com/gp/product/0321336380?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321336380 Continuous Integration: Improving Software Quality and Reducing Risk, Paul M. Duvall, Steve Matyas, Andrew Glover]
+ # [http://books.google.com.br/books?id=xWWPkGLIuxMC&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false Beck, Kent. Programação Extrema Explicada: Acolha as mudanças. Bookman, 2004.]
