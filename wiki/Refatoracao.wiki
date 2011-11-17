@@ -10,6 +10,12 @@ Em um desenvolvimento “tradicional”, inicialmente é feito o projeto e poste
 Com Refatoração, atividades de projeto são constantes durante o desenvolvimento do software. O efeito cumulativo dessas mudanças é que promoverá melhorias significativas no projeto.
 
 ----
+
+
+== Resumo dos principais tópicos relacionados a Refatoração ==
+[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png]
+
+-----
 ==Bad Smells in Code==
 
 Kent Beck, um dos criadores da Programação Extrema, afirma que refatoração deve ser utilizada quando o "código cheirar mal" (do inglês bad smells in code). Este conselho bem humorado indica uma confiança na experiência de programadores e também ressalta o valor estético do código, que deve valorizar a clareza e comunicação.
@@ -55,6 +61,4 @@ Descrição das principais operações de Refatoração que são aplicadas quand
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png]
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png]
 -----------
-
-== Resumo dos principais tópicos relacionados a Refatoração ==
-[http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png]
+== Referências ==
