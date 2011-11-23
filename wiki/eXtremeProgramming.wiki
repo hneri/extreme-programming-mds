@@ -5,4 +5,4 @@
   * [Refatoracao Refatoração]
   * [IntegracaoContinua Integração Contínua]
   * [PadroesCodificacao Padrões de Codificação]
-  * [Programação em Pares]
+  * [ProgramacaoPares Programação em Pares]
