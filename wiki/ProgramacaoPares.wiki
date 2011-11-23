@@ -2,7 +2,7 @@
 
 Todo o código produzido é escrito com duas pessoas: uma que olha para uma máquina, e outra com um teclado e um mouse.
 
-A atribuição daquele que está com o teclado/mouse, é pensar sobre a melhor forma de implementar um determinado método aqui.
+A atribuição daquele que está com o teclado/mouse, é pensar sobre a melhor forma de implementar um determinado método/algoritmo.
 
 O outro sócio é pensar mais estrategicamente:
 • Essa abordagem vai funcionar?
