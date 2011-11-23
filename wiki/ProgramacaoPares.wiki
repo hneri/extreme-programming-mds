@@ -1,13 +1,15 @@
-#summary One-sentence summary of this page.
+= Programação em Pares =
 
-= Introduction =
+Todo o código produzido é escrito com duas pessoas: uma que olha para uma máquina, e outra com um teclado e um mouse.
 
-dsfgsadfsadf
+A atribuição daquele que está com o teclado/mouse, é pensar sobre a melhor forma de implementar um determinado método aqui.
 
+O outro sócio é pensar mais estrategicamente:
+• Essa abordagem vai funcionar?
+• Quais são alguns outros casos de teste que ainda podem não funcionar?
+• Existe alguma maneira de simplificar todo o sistema para que o problema atual, apenas
+desapareça?
 
-= Details =
+O emparelhamento é dinâmico. Se duas pessoas formaram um par pela manhã, à tarde eles podem ser facilmente combinado com outras pessoas. 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Se você tem a responsabilidade de uma tarefa em uma área que não é familiar para você, você pode pedir a alguém com experiência forme o par com você.
