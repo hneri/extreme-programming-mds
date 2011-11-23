@@ -7,3 +7,4 @@
   * [PadroesCodificacao Padrões de Codificação]
   * [ProgramacaoPares Programação em Pares]
   * [PropriedadeColetiva Propriedade Coletiva do Código]
+  * [Trabalho40 40 horas de Trabalho]
