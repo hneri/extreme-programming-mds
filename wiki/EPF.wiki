@@ -1,0 +1,26 @@
+= Eclipse Process Framework =
+
+== Propósito ==
+
+ * Compor uma base de conhecimento;
+ * Prover uma fonte de recursos que apoia a adaptação e rápida montagem de processos;
+
+== O que é o Eclipse Process Framework? ==
+ * Tem como base os conceitos do Software & Systems Process Engineering Meta-Model Specification (SPEM);
+ * É a base da ferramenta Rational Method Composer (RMC) que é distribuída com o Rational Unified Process (RUP).
+ * É um framework para autoria, customização e publicação de processos;
+ * Suporta padrões de processos reutilizáveis;
+ * Apoia as melhores práticas para processos;
+ * Montagem rápida via drag-and-drop;
+ * É possível selecionar, combinar, adaptar e montar rapidamente configurações do Method Content para os projetos de uma organização;
+Método simples de gerência de conteúdo.
+
+== Conceitos Fundamentais ==
+
+Method Content: Padronizar a representação e gerenciar bibliotecas de componentes reutilizáveis.
+
+Processes: Desenvolver e gerenciar o processo para a realização de projetos. 
+
+Configuração: um framework de processo customizado e coeso para as necessidades do projeto.
+
+
