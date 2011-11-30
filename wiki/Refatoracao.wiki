@@ -18,7 +18,7 @@ Em um cenário de [XP eXtreme Programming] seria impossível refatorar o projeto
  * Você programe em pares, tornando mais provável que você tenha a coragem de enfrentar uma refatoração complicada e menos provável que você estrague algo;
  * Você tenha um projeto simples, tornando a refatoração mais fácil;
  * Você tenha testes, fazendo com que seja menos provável que você estrague algo sem perceber;
- * Você tenha integração frequente, de movo que, se você acidentalmente estragar algo sem perceber, ou se uma de suas refatorações entrar em conflito com o código de outra pessoa, você ficará sabendo em poucas horas;
+ * Você tenha integração frequente, de modo que, se você acidentalmente estragar algo sem perceber, ou se uma de suas refatorações entrar em conflito com o código de outra pessoa, você ficará sabendo em poucas horas;
  * Você esteja tranquilo, o que lhe dará mais coragem e diminuirá a probabilidade de cometer erros.
 
 Dessa forma, talvez seja possível refatorar sempre que você perceber uma oportunidade de simplificar o sistema, de reduzir as duplicações e de comunicar algo mais claramente.
