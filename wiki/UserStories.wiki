@@ -276,15 +276,17 @@ Verbos: manter, catalogar
 
 *Gerente*
 ||Responsabilidades||||Colaboração||
-||Imprimir relatórios||||Locadora||
+||Manter videos||||Video||
+||Catalogar videos||||Locadora||
 
 *Video*
 ||Responsabilidades||||Colaboração||
-||Descrever características dos vídeos||||Locadora||
+||Manter dados dos vídeos||||Locadora||
 
-*Video*
+*Locadora*
 ||Responsabilidades||||Colaboração||
-||Manter dados de clientes, de vídeos e de aluguéis||||Vídeo, Gerente, Cliente, Aluguel||
+||Manter dados do catálogo de videos||||Vídeo, Gerente||
+
 
 -----------
 
