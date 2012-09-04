@@ -1,18 +1,18 @@
 = User Stories =
 
 ------
-== Uma estória... ==
+== Uma história... ==
 
 Uma estória não é mais do que a descrição de uma pequena funcionalidade que o cliente pretende ver desenvolvida no sistema. 
 
-O termo em inglês é *story* (estória – conto) e não *history* (história - relato de fatos);
+O termo em inglês é *story* (história – conto) e não *history* (história - relato de fatos);
 
 ------
 
 ==O que são:==
  * Uma breve descrição de uma funcionalidade que foi discutida
  * São tradicionalmente escritas em cartões ou post-its 
- * Testes para determinar quando a estória está completa
+ * Testes para determinar quando a história está completa
 
 == O que não são: ==
  * Documentos de implementação
@@ -68,24 +68,24 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
 -------
 
-== Como escrever boas estórias? ==
+== Como escrever boas história? ==
 
-*Independent:* Estórias devem ser independentes uma das outras;
+*Independent:* Histórias devem ser independentes uma das outras;
 
-*Negotiable:* Estórias não são contratos, mas lembretes para discussões;
+*Negotiable:* Histórias não são contratos, mas lembretes para discussões;
 
-*Valuable:* Estórias devem agregar valor para o cliente;
+*Valuable:* Histórias devem agregar valor para o cliente;
 
-*Estimatable:* Os desenvolvedores devem ser capazes de estimar o tamanhos das estórias;
+*Estimatable:* Os desenvolvedores devem ser capazes de estimar o tamanhos das história;
 
-*Small:* estórias grandes dificultam as estimativas. Bem como estórias muito pequenas. Quebre ou agrupe dependendo do caso.
+*Small:* histórias grandes dificultam as estimativas. Bem como histórias muito pequenas. Quebre ou agrupe dependendo do caso.
 
-*Testable:* Estórias devem ser possíveis de serem testadas.
+*Testable:* Histórias devem ser possíveis de serem testadas.
 
 --------
 == Independent ==
 
- * Remover dependências entre as estórias
+ * Remover dependências entre as histórias
 
  * Remover as duplicações
 
@@ -105,7 +105,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 == Negotiable ==
 
 
-*Estórias não são imutáveis*
+*Histórias não são imutáveis*
 
  * Elas representam uma conversa
 
@@ -133,14 +133,14 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
 == Estimatable ==
 
- * Uma estória que não pode ser estimada não pode ser usada no planejamento
+ * Uma história que não pode ser estimada não pode ser usada no planejamento
 
- * Se a estória for muito complexa ela deve ser dividida em estórias menores
+ * Se a história for muito complexa ela deve ser dividida em histórias menores
 
 
 == Small ==
 
-Grandes estórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
+Grandes histórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
 
 
 
