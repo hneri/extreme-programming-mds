@@ -1,5 +1,5 @@
  * [XP eXtreme Programming]
-  * [UserStories User Stories]
+  * [UserStories Histórias do Usuário]
   * [TestesUnitarios Testes Unitários]
   * [TestesAceitacao Testes de Aceitação]
   * [Refatoracao Refatoração]
