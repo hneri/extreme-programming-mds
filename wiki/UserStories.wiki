@@ -3,7 +3,7 @@
 ------
 == Uma história... ==
 
-Uma estória não é mais do que a descrição de uma pequena funcionalidade que o cliente pretende ver desenvolvida no sistema. 
+Uma história não é mais do que a descrição de uma pequena funcionalidade que o cliente pretende ver desenvolvida no sistema. 
 
 O termo em inglês é *story* (história – conto) e não *history* (história - relato de fatos);
 
