@@ -445,4 +445,6 @@ Verbos: manter, cobrar
 
 [http://www.dtsato.com/blog/work/introduzindo_desenvolvimento_orientado_comportamento_bdd/]
 
+[http://dannorth.net/introducing-bdd/]
+
 Material produzido pelo aluno Guilherme Baufaker Rego na discplina de V&V na FGA
