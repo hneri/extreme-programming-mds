@@ -159,6 +159,20 @@ Especificando o ator, a ação e a funcionalidade desejada
 
 [http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_004.png]
 
+
+== Uma outra maneira de escrevermos as histórias (a que eu prefiro, particularmente por sua estruturação) é a seguinte: == 
+
+Como um [*ator*]
+Eu gostaria de [*ação/funcionalidade*]
+Para que [*valor de negócio*]
+
+Onde a ação é alguma funcionalidade, o valor de negócio é o benefício percebido pelo negócio da funcionalidade, e ator é a pessoa (ou papel) que vai se beneficiar dela.
+
+A vantagem é que ela te força a identificar o valor de entregar uma história quando você inicialmente a define. 
+
+
+Assim teríamos 
+
 ---------------
 
 == CRC Card ==
@@ -226,43 +240,82 @@ Especificando o ator, a ação e a funcionalidade desejada
 
 == User Stories e Critérios de Aceitação ==
 
-||US01||
-||Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes||
+* Os critérios de aceitação devem representar o comportamento pelo qual o usuário espera durante a utilização do software.
 
-||Critérios para aceitação||
-|| Cada vídeo cadastrado deve ter um ID associado, Para cada vídeo deve ser possível cadastrar o nome, o ano, o gênero, a categoria e a quantidade existente||
+* Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não. Então criamos um modelo para capturar os critérios de aceitação de uma história.
 
------
 
-||US02||
-||Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.||
+== O Uso de BDD para escrita dos critérios de aceitação ==
 
-||Critérios para aceitação||
-|| Cada cliente deve ter um cartão identificador associado, Para cada cliente deve ser possível cadastrar nome, telefone, endereço, CPF e RG||
+Behavior Driven Development - BDD é uma técnica de desenvolvimento ágil proposta por Dan North, que visa integrar regras de negócios com linguagem de programação, focando o comportamento do software.
 
------
+O foco em BDD é a linguagem e as interações usadas no processo de desenvolvimento de software.
 
-||US03||
-||Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos||
+Segundo David Chelimsky, um dos grandes problemas que as equipes de desenvolvimento enfrentam hoje é a comunicação. Dificilmente um analista de negócios, ao solicitar uma funcionalidade aos desenvolvedores, diria desta forma: “quando o cliente incluir uma ordem de serviço, esta deve ser armazenada em ANSI-Compliant relacional de banco de dados”. Mas provavelmente ele diria algo assim: “quando o cliente incluir uma ordem de serviço, ela deve ser armazenada no sistema”, obsevando-se assim que ele não está preocupado onde e como as informações serão armazenadas, e sim, que o sistema se comporte como o cliente espera.
 
-||Critérios para aceitação||
-|| Os vídeos com dois ou mais dias de atraso devem ser destacados||
+O BDD ajuda a simplificar a comunicação usando cenários descritos pelo cliente ou analista. Cada cenário é dividido em no mínimo três blocos, e estes, são definidos pelas palavras chaves:
 
-----
+*Given* - dado um contexto;
+*When* - quando acontecer um evento;
+*Then* - então se espera que aconteça algo.
 
-||US04||
-||Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos||
+Este é apenas um modelo, ou seja, não é obrigatório. Entretanto, Dan North denota que é extremamente importante a equipe seguir um padrão para facilitar a comunicação entre os envolvidos no projeto.
 
-||Critérios para aceitação||
-|| Cada cartão deve ter um identificador único||
+Título (uma linha descrevendo a história)
 
------
+Narrativa:
+Como [o papel]
+Eu quero [ação]
+Assim que [benefício]
 
-||US05||
-||Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso||
+Critérios de Aceitação: (apresentado como Cenários)
 
-||Critérios para aceitação||
-|| Cada cliente pode alugar no máximo cinco vídeos por vez, Os vídeos podem ser alugados por no máximo três dias, O cliente só poderá alugar vídeos se não tiver vídeos pendentes para devolução, Caso o cliente tenha vídeos pendentes ele deverá pagar uma extra antes de poder alugar mais vídeos, O cliente só poderá alugar vídeos se não tiver débito pendente||
+Cenário 1: Título
+Dado contexto []
+E [um pouco mais de contexto] ...
+Quando [eventos]
+Então [resultado]
+E [outro resultado ...]
+
+Cenário 2: ...
+
+Para ilustrar, vamos ao seguinte exemplo apresentado por Sato D.:
+
+Título: Cliente retira dinheiro
+
+*Como* um cliente,
+*Eu gostaria de* retirar dinheiro de um caixa automático,
+*Para que* eu não tenha que esperar numa fila de banco.
+
+Como sabemos quando essa história está entregue? Existem diversos cenários a considerar: a conta pode estar em crédito, a conta pode estar negativa mas com limite ou ainda estar com o limite estourado. Haverão outros cenários, é claro, como quando a conta está em crédito mas uma retirada a torna negativa ou quando o caixa automático não tem dinheiro suficiente para completar a operação.
+Usando o modelo entradas-eventos-saídas (given-when-then), os dois primeiros cenários poderiam ficar assim:
+
+Cenário 1: Conta está em crédito
+*Dado que* a conta está em crédito
+*E* o cartão é válido
+*E* o caixa tem dinheiro suficiente
+*Quando* o cliente requisita dinheiro
+*Então* verifique que a conta foi debitada
+*E* verifique que o dinheiro é entregue
+*E* verifique que o cartão é devolvido
+
+Perceba o uso da palavra “e” para conectar múltiplas entradas e múltiplas saídas de forma natural.
+
+Cenário 2: Conta está negativa além do limite
+*Dado que* a conta está negativa
+*E* o cartão é válido
+*Quando* o cliente requisita dinheiro
+*Então* verifique que uma mensagem de rejeição é mostrada
+*E* o dinheiro não é entregue
+*E* o cartão é devolvido
+
+Ambos cenários são baseados no mesmo evento e até tem algumas entradas e saídas em comum. Idealmente, nós queremos economizar tempo e reusar entradas, eventos e saídas.
+
+As principais vantagens de se utilizar o BDD:
+* Comunicação entre equipes
+* Compartilhamento de conhecimento
+* Documentação dinâmica
+* Visão do todo
 
 ---------
 == CRC Cards ==
@@ -352,3 +405,7 @@ Verbos: manter, cobrar
 [http://radlab.cs.berkeley.edu/w/upload/3/36/UserStories.pdf Rad Lab, UC Berkeley. User Stories and Design, 2007]
 
 [http://www.mountaingoatsoftware.com/system/presentation/file/35/UserStoriesXPAtlanta.pdf Montain Got Software, User Stories Applied for Agile Software Development]
+
+[http://www.dtsato.com/blog/work/introduzindo_desenvolvimento_orientado_comportamento_bdd/]
+
+Material produzido pelo aluno Guilherme Baufaker Rego na discplina de V&V na FGA
