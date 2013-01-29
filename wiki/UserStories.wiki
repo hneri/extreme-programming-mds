@@ -266,18 +266,28 @@ Este é apenas um modelo, ou seja, não é obrigatório. Entretanto, Dan North d
 
 Título (uma linha descrevendo a história)
 
+
 Narrativa:
+
 Como [o papel]
+
 Eu quero [ação]
+
 Assim que [benefício]
+
 
 Critérios de Aceitação: (apresentado como Cenários)
 
 Cenário 1: Título
+
 Dado contexto []
+
 E [um pouco mais de contexto] ...
+
 Quando [eventos]
+
 Então [resultado]
+
 E [outro resultado ...]
 
 Cenário 2: ...
@@ -287,29 +297,45 @@ Para ilustrar, vamos ao seguinte exemplo apresentado por Sato D.:
 Título: Cliente retira dinheiro
 
 *Como* um cliente,
+
 *Eu gostaria de* retirar dinheiro de um caixa automático,
+
 *Para que* eu não tenha que esperar numa fila de banco.
+
 
 Como sabemos quando essa história está entregue? Existem diversos cenários a considerar: a conta pode estar em crédito, a conta pode estar negativa mas com limite ou ainda estar com o limite estourado. Haverão outros cenários, é claro, como quando a conta está em crédito mas uma retirada a torna negativa ou quando o caixa automático não tem dinheiro suficiente para completar a operação.
 Usando o modelo entradas-eventos-saídas (given-when-then), os dois primeiros cenários poderiam ficar assim:
 
 Cenário 1: Conta está em crédito
+
 *Dado que* a conta está em crédito
+
 *E* o cartão é válido
+
 *E* o caixa tem dinheiro suficiente
+
 *Quando* o cliente requisita dinheiro
+
 *Então* verifique que a conta foi debitada
+
 *E* verifique que o dinheiro é entregue
+
 *E* verifique que o cartão é devolvido
 
 Perceba o uso da palavra “e” para conectar múltiplas entradas e múltiplas saídas de forma natural.
 
 Cenário 2: Conta está negativa além do limite
+
 *Dado que* a conta está negativa
+
 *E* o cartão é válido
+
 *Quando* o cliente requisita dinheiro
+
 *Então* verifique que uma mensagem de rejeição é mostrada
+
 *E* o dinheiro não é entregue
+
 *E* o cartão é devolvido
 
 Ambos cenários são baseados no mesmo evento e até tem algumas entradas e saídas em comum. Idealmente, nós queremos economizar tempo e reusar entradas, eventos e saídas.
