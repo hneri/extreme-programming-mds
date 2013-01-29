@@ -240,9 +240,9 @@ Assim teríamos
 
 == User Stories e Critérios de Aceitação ==
 
-* Os critérios de aceitação devem representar o comportamento pelo qual o usuário espera durante a utilização do software.
+- Os critérios de aceitação devem representar o comportamento pelo qual o usuário espera durante a utilização do software.
 
-* Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não. Então criamos um modelo para capturar os critérios de aceitação de uma história.
+- Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não. Então criamos um modelo para capturar os critérios de aceitação de uma história.
 
 
 == O Uso de BDD para escrita dos critérios de aceitação ==
@@ -256,8 +256,11 @@ Segundo David Chelimsky, um dos grandes problemas que as equipes de desenvolvime
 O BDD ajuda a simplificar a comunicação usando cenários descritos pelo cliente ou analista. Cada cenário é dividido em no mínimo três blocos, e estes, são definidos pelas palavras chaves:
 
 *Given* - dado um contexto;
+
 *When* - quando acontecer um evento;
+
 *Then* - então se espera que aconteça algo.
+
 
 Este é apenas um modelo, ou seja, não é obrigatório. Entretanto, Dan North denota que é extremamente importante a equipe seguir um padrão para facilitar a comunicação entre os envolvidos no projeto.
 
