@@ -163,8 +163,11 @@ Especificando o ator, a ação e a funcionalidade desejada
 == Uma outra maneira de escrevermos as histórias (a que eu prefiro, particularmente por sua estruturação) é a seguinte: == 
 
 Como um [*ator*]
+
 Eu gostaria de [*ação/funcionalidade*]
+
 Para que [*valor de negócio*]
+
 
 Onde a ação é alguma funcionalidade, o valor de negócio é o benefício percebido pelo negócio da funcionalidade, e ator é a pessoa (ou papel) que vai se beneficiar dela.
 
