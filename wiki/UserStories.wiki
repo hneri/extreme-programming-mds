@@ -341,10 +341,15 @@ Cenário 2: Conta está negativa além do limite
 Ambos cenários são baseados no mesmo evento e até tem algumas entradas e saídas em comum. Idealmente, nós queremos economizar tempo e reusar entradas, eventos e saídas.
 
 As principais vantagens de se utilizar o BDD:
+
 * Comunicação entre equipes
+
 * Compartilhamento de conhecimento
+
 * Documentação dinâmica
+
 * Visão do todo
+
 
 ---------
 == CRC Cards ==
