@@ -276,7 +276,7 @@ Como [o papel]
 
 Eu quero [ação]
 
-Assim que [benefício]
+Para que [benefício]
 
 
 Critérios de Aceitação: (apresentado como Cenários)
