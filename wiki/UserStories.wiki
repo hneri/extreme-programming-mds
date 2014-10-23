@@ -245,7 +245,7 @@ Assim teríamos
 
 - Os critérios de aceitação devem representar o comportamento pelo qual o usuário espera durante a utilização do software.
 
-- Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não. Então criamos um modelo para capturar os critérios de aceitação de uma história.
+- Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não.
 
 
 == O Uso de BDD para escrita dos critérios de aceitação ==
