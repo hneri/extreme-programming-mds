@@ -115,7 +115,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
  * Não devem incluir muitos detalhes
 
-- Muitos detalhes podem dar uma falta impressão de completude e passar a impressão de que novas conversas não são mais necessárias.
+- Muitos detalhes podem dar uma falsa impressão de completude e passar a impressão de que novas conversas não são mais necessárias.
 
 
 == Valuable ==
@@ -128,7 +128,7 @@ User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamen
 
 *Exemplo:*
 
-– Os dados serão persistidos em um banco de dados de qualidade e free
+– Os dados serão persistidos em um banco de dados livre
 
 
 == Estimatable ==
