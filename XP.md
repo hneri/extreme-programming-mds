@@ -1,0 +1,40 @@
+# Extreme Programming #
+
+Programação extrema (do inglês eXtreme Programming), ou simplesmente XP, é uma metodologia ágil para equipes pequenas e médias e que irão desenvolver software com requisitos vagos e em constante mudança. Para isso, adota a estratégia de constante acompanhamento e realização de vários pequenos ajustes durante o desenvolvimento de software.
+Os cinco valores fundamentais da metodologia XP são: comunicação, simplicidade, feedback, coragem e respeito. A partir desses valores, possui como princípios básicos: feedback rápido, presumir simplicidade, mudanças incrementais, abraçar mudanças e trabalho de qualidade.
+Dentre as variáveis de controle em projetos (custo, tempo, qualidade e escopo), há um foco explícito em escopo. Para isso, recomenda-se a priorização de funcionalidades que representem maior valor possível para o negócio. Desta forma, caso seja necessário a diminuição de escopo, as funcionalidades menos valiosas serão adiadas ou canceladas.
+A XP incentiva o controle da qualidade como variável do projeto, pois o pequeno ganho de curto prazo na produtividade, ao diminuir qualidade, não é compensado por perdas (ou até impedimentos) a médio e longo prazo.
+
+
+## Valores ##
+
+  * Comunicação
+  * Simplicidade
+  * Feedback
+  * Coragem
+  * Respeito
+
+## Princípios Básicos ##
+  * Feedback rápido
+  * Presumir simplicidade
+  * Mudanças incrementais
+  * Abraçar mudanças
+  * Trabalho de alta qualidade.
+
+## Práticas ##
+
+Para aplicar os valores e princípios durante o desenvolvimento de software, XP propõe uma série de práticas. Há uma confiança muito grande na sinergia entre elas, os pontos fracos de cada uma são superados pelos pontos fortes de outras.
+
+  * Jogo de Planejamento (Planning Game);
+  * Pequenas Versões (Small Releases);
+  * Metáfora (Metaphor);
+  * Projeto Simples (Simple Design);
+  * Time Coeso (Whole Team);
+  * Ritmo Sustentável (Sustainable Pace);
+  * Reuniões em pé (Stand-up Meeting);
+  * Posse Coletiva (Collective Ownership);
+  * Programação em Pares (Pair Programming)
+  * [Padrões de Codificação (Coding Standards);](PadroesCodificacao.md)
+  * Testes Constantes ([Unitários](TestesUnitarios.md) e de [Aceitação](TestesAceitacao.md));
+  * [Refatoração (Refactoring);](Refatoracao.md)
+  * [Integração Contínua (Continuous Integration);](IntegracaoContinua.md)

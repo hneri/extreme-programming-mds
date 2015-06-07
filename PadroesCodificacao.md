@@ -1,0 +1,33 @@
+# Padrões de Codificação #
+
+Um cenário no qual vários programadores trabalhando em tantas partes diferentes do sistema, trocando de dupla várias vezes por dia e refatorando os códigos uns dos outros constantemente não pode ter conjuntos diferentes de práticas de codificação. O padrão adotado deve exigir a menor quantidade de trabalho possível, consistente com a regra do "uma e somente uma vez" (sem código duplicado). O padrão deve enfatizar a comunicação. Finalmente, o padrão deve ser adotado voluntariamente por todo o time.
+
+A organização do código fonte facilita os processos de desenvolvimento, retirada de bugs, atividades de validação e manutenção.  O uso de um padrão de codificação também aumenta a produtividade num projeto, uma vez que a comunicação dentro da equipe de desenvolvimento fica mais fácil, mas vale ressaltar que partes desses padrões são vistas, algumas vezes, como sugestões por empresas que adotam seus próprios padrões.
+
+Seria impossível pedir ao time para codificar seguindo um padrão comum. Programadores são profundamente individualistas e prefeririam desistir do projeto a mudar seu estilo de indentação. A não ser que:
+
+  * A [eXtreme Programming](XP.md) como um todo faça com que eles desejem fazer parte de um time vencedor.
+
+Dessa forma, talvez eles possam estar mais dispostos a mudar um pouco o sem estilo. Além disso, sem padrões de codificação, os atritos adicionais dificultarão a programação em pares e a refatoração de maneira significativa.
+
+
+---
+
+## Consistência ##
+O código produzido utilizando padrões deve ser a marca da equipe e não o código produzido pelo Joãozinho ou a Mariazinha. Deve-se ter o entendimento de que qualquer um dentro da equipe pode ter desenvolvido aquele código, sem que se faça distinção de quem o escreveu.
+Uncle Bob escreve muito bem essa definição ao afirmar que "Esta não é a fantasia de igualdade para que se possa sobrepujar a individualidade em detrimento do grupo, é uma necessidade básica". Como todo indivíduo possui seus próprios vícios e fetiches relacionados ao desenvolvimento, imagine 10 programadores trabalhando num mesmo código ao longo do projeto. Conforme o tempo passa, a mistura de padrões e estilos diferentes dentro do código tornará impossível sua leitura.
+
+---
+
+## Padrões automatizados ##
+
+Existem plugins para o Eclipse que formatam o código de acordo com o padrão [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html).
+
+O plugin usado para o exemplo foi o [Jalopy](http://jalopy.sourceforge.net/index.html) que foi criado por Marco Hunsicker  e Steve Heyns. Para mais informações sobre informações consulte o [tutorial de instalação](Jalopy.md).
+
+---
+
+# Referências #
+
+  1. [Maldita Comédia - Entre Padrões de Código e a Programação Literária](http://malditacomedia.blogspot.com/2007/09/entre-padres-de-cdigo-e-programao.html)
+  1. [Beck, Kent. Programação Extrema Explicada: Acolha as mudanças. Bookman, 2004.](http://books.google.com.br/books?id=xWWPkGLIuxMC&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false)

@@ -1,0 +1,258 @@
+# Refatoração #
+
+  * É uma das práticas da [eXtreme Programming](XP.md) na qual os programadores reestruturam o sistema sem alterar seu comportamento a fim de remover duplicidade, melhorar a comunicação, simplificar e acrescentar flexibilidade.
+  * Refatoração é o processo de modificar um sistema de software de tal modo que não altere o comportamento externamente observável e ainda melhora sua estrutura interna (Fowler, 99).
+  * É um modo disciplinado de limpar o código e que minimiza as chances de introduzir bugs (Fowler, 99).
+  * De fato, ao refatorar você melhora o código e seu projeto depois deles terem sido escritos.
+
+
+---
+
+Em um desenvolvimento “tradicional”, inicialmente é feito o projeto e posteriormente a codificação. A Refatoração permite executar no sentido oposto: artefatos de código podem ser alterados de modo a melhorar o projeto de software. Essas alterações em código são realizadas em pequenos passos, de modo muito controlado e simples.
+
+Com Refatoração, atividades de projeto são constantes durante o desenvolvimento do software. O efeito cumulativo dessas mudanças é que promoverá melhorias significativas no projeto.
+
+
+---
+
+Em um cenário de [eXtreme Programming](XP.md) seria impossível refatorar o projeto do sistema frequentemente. Demoraria muito tempo, seria muito difícil controlar e provavelmente estragaria o sistema. A não ser que:
+
+  * Você esteja acostumado à propriedade coletiva, não se importante em fazer mudanças sempre que necessário;
+  * Você tenha padrões de codificação, não sendo preciso reformatar antes de refatorar;
+  * Você programe em pares, tornando mais provável que você tenha a coragem de enfrentar uma refatoração complicada e menos provável que você estrague algo;
+  * Você tenha um projeto simples, tornando a refatoração mais fácil;
+  * Você tenha testes, fazendo com que seja menos provável que você estrague algo sem perceber;
+  * Você tenha integração frequente, de modo que, se você acidentalmente estragar algo sem perceber, ou se uma de suas refatorações entrar em conflito com o código de outra pessoa, você ficará sabendo em poucas horas;
+  * Você esteja tranquilo, o que lhe dará mais coragem e diminuirá a probabilidade de cometer erros.
+
+Dessa forma, talvez seja possível refatorar sempre que você perceber uma oportunidade de simplificar o sistema, de reduzir as duplicações e de comunicar algo mais claramente.
+
+---
+
+
+## Resumo dos principais tópicos relacionados a Refatoração ##
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_034.png)
+
+
+---
+
+## Bad Smells in Code ##
+
+Kent Beck, um dos criadores da Programação Extrema, afirma que refatoração deve ser utilizada quando o "código cheirar mal" (do inglês bad smells in code). Este conselho bem humorado indica uma confiança na experiência de programadores e também ressalta o valor estético do código, que deve valorizar a clareza e comunicação.
+
+Saber refatorar (executar cada operação de refatoração) não te faz um bom projetista refatorador. É preciso saber quando (início e término).
+
+“Maus cheiros” de código são pontos em que há possibilidades para aplicação de refatoração. Maus cheiros são pontos em que princípios de bom projeto não são considerados ou podem ser melhorados.
+
+Entretanto estes pontos de melhorias não são precisos: o julgamento do refatorador é quem vai decidir quais operações podem e devem ser aplicadas.
+Este julgamento vem na medida em que o projetista ganha familiaridade com as operações de refatoração.
+
+
+---
+
+
+## Maus cheiros: ##
+
+  1. Código duplicado: Se o mesmo trecho de código aparecer em vários pontos do projeto, saiba que sua solução será melhor se você conseguir unificá-los.
+  1. Método longo: Quanto maior for o  método, mais difícil é de entendê-lo. Vários métodos curtos (e a delegação entre eles) é preferível. Vários métodos ajudam a aumentar coesão e diminuir acoplamento (por meio de indireção).
+  1. Classe grande: Quando uma classe apresenta muitas variáveis de instâncias é indício de que ela está com coesão baixa (fazendo mais do que deveria). Classes com muito código indica que há grandes chances de haver código duplicado.
+  1. Longa lista de parâmetros: Listas de parâmetros longas são difíceis de entender, pois se tornam inconsistentes e difíceis de usar.
+  1. Mudanças divergentes: idealmente mudanças em uma classe devem ser realizadas de modo pontual.
+  1. Cirurgia com rifle: É o oposto da mudança com rifle: ao realizar uma mudança várias classes devem sofrer modificações. É difícil de encontrar todos os lugares afetados, e fácil de esquecer alguma modificação.
+  1. Inveja de recursos: Quando métodos de uma classe estão mais interessados nos recursos de outras classes (geralmente atributos).
+  1. Aglomerado de dados: É comum que alguns itens de dados apareçam em conjunto em alguns pedaços do código de diversas formas possíveis. Tais itens podem ser transformados em objetos.
+  1. Obsessão primitiva: Tipos de dados primitivos são oferecidos por todas as linguagens: int, float, boolean, etc... À partir destes tipos de dados primitivos são formadas estruturas maiores, tais como registros e classes.
+  1. Instruções Switch: Em OO é comum ver a mesma instrução **switch ... case** em diversos pontos do projeto (duplicação de código). Solução mais elegante para este comando é o uso de polimorfismo.
+  1. Hierarquias de heranças paralelas: Caso especial de cirurgia com rifle: sempre que adicionar uma subclasse em um ramo, terá que adicionar a mesma subclasse no outro ramo. É também indício de duplicação de código.
+  1. Classe Preguiçosa: Classes que não possuem comportamento suficiente para ser mantida no projeto, ou seja, pequena demais deve ser eliminada do projeto.
+  1. Generalidade Especulativa: Projetos que são genéricos demais, em que o projetista fez previsões de funcionalidades que algum dia poderiam vir a ser implementadas. São projetos difíceis de entender e manter.
+  1. Campo temporário: Ocorre quando algumas variáveis de instância de um objeto são utilizadas apenas em algum contexto específico (e não a maior parte dela).
+  1. Cadeias de mensagens: Ocorre quando um objeto chama outro, que chama outro, que chama outro e assim sucessivamente.
+  1. Homem do meio: Caso em que a indireção é indesejável. Os métodos de uma classe simplesmente delegam a execução para métodos de outras classes.
+  1. Intimidade inapropriada: Algumas vezes uma classe torna muito íntima das demais, o que permite que ela investigue as partes privadas das outras classes. O ideal é que essa relação seja a mais restrita possível.
+  1. Classes alternativas com interfaces diferentes: Métodos que fazem a mesma coisa mas que apresentam assinaturas diferentes, conforme as classes às quais estão ligadas.
+  1. Biblioteca de classes incompleta: Muitas vezes é comum encontrar bibliotecas de classes que não oferecem todos os recursos dos quais precisamos. Além disso, não conseguimos ter acesso ao seu fonte para modificá-lo.
+  1. Classe de dados: Classes que possuem apenas campos de dados, métodos set e get. São classes simples demais e que certamente são muito utilizadas pelas demais classes da aplicação.
+  1. Herança negada: Subclasses herdam métodos e dados de suas classes-pai, mas nem sempre gostariam de herdá-los. Nesses casos há um indício claro que a hierarquia está errada.
+
+
+---
+
+## Maus cheiros e operações de Refatoração ##
+
+Descrição das principais operações de Refatoração que são aplicadas quando os maus cheiros de código são encontrados.
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_032.png)
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_033.png)
+
+---
+
+## Exemplos ##
+
+### Extração de método: ###
+
+**Antes da operação de refatoração:**
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_011.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_011.png)
+
+**Depois da refatoração:**
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_012.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_012.png)
+
+**A dica para a operação de extração de métodos é fazer com que cada método tenha uma única responsabilidade.**
+
+---
+
+
+## Exemplo Prático - [Sistema AVS](http://code.google.com/p/sistemaavs-mds-01/) ##
+
+### Método que realiza a locação de vídeos: ###
+
+```
+	//mau cheiro: metodo longo
+	//mau cheiro: comentarios
+	public void realizarLocacao(Locadora locadora,
+			ArrayList<Integer> numeroCatalogoFilme, int numeroCartaoAVS) {
+		ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
+	
+		//verificar se o cliente existe e se tem pendencias
+		
+		//mau cheiro: condicional complicada
+		if ((verificarCliente(locadora, numeroCartaoAVS) == true)
+				&& (controladoraDevolucao.verificarPendencia(locadora,
+						numeroCartaoAVS) == 1)) {
+			
+		
+			//verificar se o video esta disponivel
+			
+			//mau cheiro: campo temporario
+			String verificacao = verificarVideos(locadora, numeroCatalogoFilme);
+			if (verificacao == "disponivel") {
+				double valorDevido = calcularTaxaLocacao(numeroCatalogoFilme);
+				Aluguel aluguel = new Aluguel(calcularDataDevolucao(),
+						numeroCatalogoFilme, numeroCartaoAVS, valorDevido);
+				
+				//atualizar o valor devido do cliente
+				for (Iterator<Cliente> it = locadora.getCliente().iterator(); it
+						.hasNext();) {
+					Cliente cl = (Cliente) it.next();
+					if (numeroCartaoAVS == cl.getNumeroCartaoAVS()
+							.getIdentificador()) {
+						cl.setValorDevido(valorDevido);
+						break;
+					}
+				}
+				locadora.getAluguel().add(aluguel);
+			}
+		}
+	}
+```
+
+---
+
+### Maus cheiros encontrados: ###
+  1. Método longo
+  1. Campo temporário
+  1. Comentários
+  1. Condicional complicada
+
+
+Como se repetia várias vezes em todo o código o uso de iteradores para buscar atributos de clientes, vídeos e aluguéis tal característica foi extraída para a classe ControladoraBusca que tem métodos que fazem todos os tipos de busca e retornam o objeto procurado. A operação de refatoração para foi a Extração de Classe e em termos de projeto caracterizou um padrão GRASP chamado Invenção Pura.
+
+---
+
+
+### Método refatorado: ###
+
+```
+public Aluguel realizarLocacao(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS) {
+        ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
+
+        if (verificarPendenciasCliente(locadora, numeroCartaoAVS,
+                    controladoraDevolucao)) {
+        	
+             /*
+             * Campo temporário valorDevido substituido por query
+             */
+        	/*
+        	 * Condicional complicada extraída para método verificarVideos
+        	 */
+            if (verificarVideos(locadora, numeroCatalogoFilmes)) {
+                
+                Aluguel aluguel = new Aluguel(calcularDataDevolucao(),
+                        numeroCatalogoFilmes, numeroCartaoAVS,
+                        calcularTaxaLocacao(numeroCatalogoFilmes));
+                /*
+                 * Metodo atualizarValorDevido extraido
+                 */
+
+                //
+                atualizarValorDevido(locadora, numeroCatalogoFilmes,
+                    numeroCartaoAVS);
+                /*
+                 * Metodo adicionarAluguelEmLocadora extraído
+                 */
+
+               locadora.getAluguel().add(aluguel);
+
+                return aluguel;
+            }
+        }
+
+        return null;
+    }
+```
+
+
+---
+
+### Métodos extraídos ###
+
+**Para a própria classe:**
+```
+  private void atualizarValorDevido(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS) {
+        c1 = b.BuscaCliente(locadora, c2, numeroCartaoAVS);
+        c1.setValorDevido(calcularTaxaLocacao(numeroCatalogoFilmes));
+    }
+```
+
+```
+ public boolean verificarVideos(Locadora locadora,
+        ArrayList<Integer> numeroCatalogoFilmes) {
+       
+        Iterator<Integer> it = b.BuscaNumeroCatalogo(numeroCatalogoFilmes);
+
+        return atualizarQuantidadeVideos(locadora, it);
+    }
+```
+
+**Para a classe ControladoraBusca:**
+
+```
+  public Cliente BuscaCliente(Locadora locadora, Cliente cliente,
+        int numeroCartaoAVS) {
+        for (Iterator<Cliente> it = locadora.getCliente().iterator();
+                it.hasNext();) {
+            cliente = it.next();
+
+            if (numeroCartaoAVS == cliente.getNumeroCartaoAVS()
+                                              .getIdentificador()) {
+
+                return cliente;
+            }
+        }
+
+        return null;
+    }
+```
+
+---
+
+## Referências ##
+
+  1. [Fowler, Martin. Refactoring: Improving the Design of Existing Code. Addison-Wesley, 1999](http://books.google.com/books?id=1MsETFPD3I0C&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false)
+  1. [Wikipédia - Refatoração](http://pt.wikipedia.org/wiki/Refatora%C3%A7%C3%A3o)
+  1. [Beck, Kent. Programação Extrema Explicada: Acolha as mudanças. Bookman, 2004.](http://books.google.com.br/books?id=xWWPkGLIuxMC&printsec=frontcover&hl=pt-BR#v=onepage&q&f=false)
+  1. Material de aula da disciplina de Desenvolvimento Avançado de Software do professor [André Luiz Peron Martins Lanna](https://twitter.com/#!/andreperon).

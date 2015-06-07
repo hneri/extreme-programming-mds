@@ -1,0 +1,501 @@
+# User Stories #
+
+
+---
+
+## Uma história... ##
+
+Uma história não é mais do que a descrição de uma pequena funcionalidade que o cliente pretende ver desenvolvida no sistema.
+
+O termo em inglês é **story** (história – conto) e não **history** (história - relato de fatos);
+
+
+---
+
+
+## O que são: ##
+  * Uma breve descrição de uma funcionalidade que foi discutida
+  * São tradicionalmente escritas em cartões ou post-its
+  * Testes para determinar quando a história está completa
+
+## O que não são: ##
+  * Documentos de implementação
+  * Imutáveis
+
+
+---
+
+
+## Características Importantes: ##
+
+  * Stakeholders escrevem User Stories, não os desenvolvedores. User Stories são simples o suficiente para que as pessoas possam aprender a escrevê-las em alguns minutos.
+  * User Stories são usadas para estimar o esforço da sua implementação.
+  * User Stories são usadas para indicar a prioridade dos requisitos
+
+
+---
+
+
+## User Stories afetam o  planejamento em... ##
+
+  * Planejamento:  a prioridade atribuída a uma user story define quando o requisito será implementado.
+  * Estimativas: o trabalho que será feito na iteração depende da estimativa do esforço para que os produtos de trabalho (incluindo User Stories) sejam implementados.
+
+
+---
+
+
+## Aspectos Críticos: 3C ##
+
+User Stories possuem três aspectos críticos, os quais devem ser obrigatoriamente atendidos:
+
+  1. Cards: user stories devem ser escritos em cartões para que sejam naturalmente pequenos;
+  1. Conversation: lembrete para identificar uma funcionalidade que foi conversada e discutida com os stakeholders;
+  1. Confirmation: o cliente define uma maneira de validar esse pedido.
+
+## Exemplos da utilização do 3C ##
+
+**Cards**
+
+- "Um administrador pode cadastrar um jogo para que os apostadores possam fazer seus palpites de resultado"
+
+
+**Conversation**
+
+- O administrador pode cadastrar o jogo quando quiser? E se ele cadastrar muito em cima?
+
+- Ah, eu acho que ele tem que cadastrar com no mínimo 48h de antecedência
+
+- Legal... concordo
+
+**Confirmation (Regras de negócio)**
+
+- Um administrador não poderá cadastrar um jogo com menos de 48h de antecedência
+
+- O jogo deve pertencer ao campeonato corrente
+
+- Um administrador não poderá cadastrar dois jogos envolvendo os mesmos times no mesmo horário
+
+
+---
+
+
+## Como escrever boas história? ##
+
+**Independent:** Histórias devem ser independentes uma das outras;
+
+**Negotiable:** Histórias não são contratos, mas lembretes para discussões;
+
+**Valuable:** Histórias devem agregar valor para o cliente;
+
+**Estimatable:** Os desenvolvedores devem ser capazes de estimar o tamanhos das história;
+
+**Small:** histórias grandes dificultam as estimativas. Bem como histórias muito pequenas. Quebre ou agrupe dependendo do caso.
+
+**Testable:** Histórias devem ser possíveis de serem testadas.
+
+
+---
+
+## Independent ##
+
+  * Remover dependências entre as histórias
+
+  * Remover as duplicações
+
+**Exemplo:**
+
+  * Um usuário pode entrar com seu primeiro nome
+
+  * Um usuário pode entrar com seu último nome
+
+  * Um usuário pode, opcionalmente, entrar com o seu nome do meio
+
+**Melhor:**
+
+  * Um usuário pode entrar com o seu primeiro nome, com o seu último nome ou opcionalmente pode entrar com o seu nome do meio
+
+
+## Negotiable ##
+
+
+**Histórias não são imutáveis**
+
+  * Elas representam uma conversa
+
+– Conversas podem ser resumidas
+
+– Conversas não são completas
+
+  * Não devem incluir muitos detalhes
+
+- Muitos detalhes podem dar uma falsa impressão de completude e passar a impressão de que novas conversas não são mais necessárias.
+
+
+## Valuable ##
+
+**Anti-exemplos:**
+
+– A aplicação deve ser escrita usando Ruby on Rails
+
+– MySQL será usado para a persistência dos dados
+
+**Exemplo:**
+
+– Os dados serão persistidos em um banco de dados livre
+
+
+## Estimatable ##
+
+  * Uma história que não pode ser estimada não pode ser usada no planejamento
+
+  * Se a história for muito complexa ela deve ser dividida em histórias menores
+
+
+## Small ##
+
+Grandes histórias (épicas) são difíceis de estimar e difíceis de planejar, elas não se encaixam bem em uma única iteração
+
+
+
+## Testable ##
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/testable.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/testable.jpg)
+
+
+---
+
+## Escrevendo User Stories ##
+
+Especificando o ator, a ação e a funcionalidade desejada
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_como_escrever_user_storie.png](http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_como_escrever_user_storie.png)
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_00003.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_00003.png)
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_004.png](http://extreme-programming-mds.googlecode.com/svn/wiki/Sele%C3%A7%C3%A3o_004.png)
+
+
+## Uma outra maneira de escrevermos as histórias (a que eu prefiro, particularmente por sua estruturação) é a seguinte: ##
+
+Como um [**ator**]
+
+Eu gostaria de [**ação/funcionalidade**]
+
+Para que [**valor de negócio**]
+
+
+Onde a ação é alguma funcionalidade, o valor de negócio é o benefício percebido pelo negócio da funcionalidade, e ator é a pessoa (ou papel) que vai se beneficiar dela.
+
+A vantagem é que ela te força a identificar o valor de entregar uma história quando você inicialmente a define.
+
+
+Assim teríamos
+
+
+---
+
+
+## CRC Card ##
+
+**Class**
+
+– Qual o nome da classe e a classificação?
+
+**Responsibility**
+
+– Qual a responsabilidade da classe?
+
+**Collaboration**
+
+– Quais classes se comunicam entre si?
+
+
+---
+
+## Exemplo: MVC ##
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_mvc.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/exemplo_mvc.jpg)
+
+
+---
+
+## Como extrair classes e responsabilidades? ##
+
+**Procurando classes**
+
+– Extração de substantivos
+
+**Procurando responsabilidades**
+
+– Extração de verbos
+
+---
+
+
+## Exemplos ##
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/crc-01.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/crc-01.jpg)
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/crc001.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/crc001.jpg)
+
+
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/crc-02.png](http://extreme-programming-mds.googlecode.com/svn/wiki/crc-02.png)
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/crc02.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/crc02.jpg)
+
+
+---
+
+## Exemplo Prático ##
+
+![http://extreme-programming-mds.googlecode.com/svn/wiki/avs.jpg](http://extreme-programming-mds.googlecode.com/svn/wiki/avs.jpg)
+
+
+---
+
+## User Stories ##
+
+  * US01 – Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes.
+
+  * US02 – Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.
+
+  * US03 – Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da devolução dos vídeos.
+
+  * US04 – Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos.
+
+  * US05 – Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso.
+
+
+---
+
+
+## User Stories e Critérios de Aceitação ##
+
+- Os critérios de aceitação devem representar o comportamento pelo qual o usuário espera durante a utilização do software.
+
+- Segundo Sato D.,  o comportamento de uma história é simplesmente seu teste de aceitação – se o sistema atende a todos os critérios de aceitação, ele está se comportando corretamente; caso contrário, não.
+
+
+## O Uso de BDD para escrita dos critérios de aceitação ##
+
+Behavior Driven Development - BDD é uma técnica de desenvolvimento ágil proposta por Dan North, que visa integrar regras de negócios com linguagem de programação, focando o comportamento do software.
+
+O foco em BDD é a linguagem e as interações usadas no processo de desenvolvimento de software.
+
+Segundo David Chelimsky, um dos grandes problemas que as equipes de desenvolvimento enfrentam hoje é a comunicação. Dificilmente um analista de negócios, ao solicitar uma funcionalidade aos desenvolvedores, diria desta forma: “quando o cliente incluir uma ordem de serviço, esta deve ser armazenada em ANSI-Compliant relacional de banco de dados”. Mas provavelmente ele diria algo assim: “quando o cliente incluir uma ordem de serviço, ela deve ser armazenada no sistema”, obsevando-se assim que ele não está preocupado onde e como as informações serão armazenadas, e sim, que o sistema se comporte como o cliente espera.
+
+O BDD ajuda a simplificar a comunicação usando cenários descritos pelo cliente ou analista. Cada cenário é dividido em no mínimo três blocos, e estes, são definidos pelas palavras chaves:
+
+**Given** - dado um contexto;
+
+**When** - quando acontecer um evento;
+
+**Then** - então se espera que aconteça algo.
+
+
+Este é apenas um modelo, ou seja, não é obrigatório. Entretanto, Dan North denota que é extremamente importante a equipe seguir um padrão para facilitar a comunicação entre os envolvidos no projeto.
+
+Título (uma linha descrevendo a história)
+
+
+Narrativa:
+
+Como [papel](o.md)
+
+Eu quero [ação]
+
+Para que [benefício]
+
+
+Critérios de Aceitação: (apresentado como Cenários)
+
+Cenário 1: Título
+
+Dado contexto [.md](.md)
+
+E [pouco mais de contexto](um.md) ...
+
+Quando [eventos](eventos.md)
+
+Então [resultado](resultado.md)
+
+E [resultado ...](outro.md)
+
+Cenário 2: ...
+
+Para ilustrar, vamos ao seguinte exemplo apresentado por Sato D.:
+
+Título: Cliente retira dinheiro
+
+**Como** um cliente,
+
+**Eu gostaria de** retirar dinheiro de um caixa automático,
+
+**Para que** eu não tenha que esperar numa fila de banco.
+
+
+Como sabemos quando essa história está entregue? Existem diversos cenários a considerar: a conta pode estar em crédito, a conta pode estar negativa mas com limite ou ainda estar com o limite estourado. Haverão outros cenários, é claro, como quando a conta está em crédito mas uma retirada a torna negativa ou quando o caixa automático não tem dinheiro suficiente para completar a operação.
+Usando o modelo entradas-eventos-saídas (given-when-then), os dois primeiros cenários poderiam ficar assim:
+
+Cenário 1: Conta está em crédito
+
+**Dado que** a conta está em crédito
+
+**E** o cartão é válido
+
+**E** o caixa tem dinheiro suficiente
+
+**Quando** o cliente requisita dinheiro
+
+**Então** verifique que a conta foi debitada
+
+**E** verifique que o dinheiro é entregue
+
+**E** verifique que o cartão é devolvido
+
+Perceba o uso da palavra “e” para conectar múltiplas entradas e múltiplas saídas de forma natural.
+
+Cenário 2: Conta está negativa além do limite
+
+**Dado que** a conta está negativa
+
+**E** o cartão é válido
+
+**Quando** o cliente requisita dinheiro
+
+**Então** verifique que uma mensagem de rejeição é mostrada
+
+**E** o dinheiro não é entregue
+
+**E** o cartão é devolvido
+
+Ambos cenários são baseados no mesmo evento e até tem algumas entradas e saídas em comum. Idealmente, nós queremos economizar tempo e reusar entradas, eventos e saídas.
+
+As principais vantagens de se utilizar o BDD:
+
+**Comunicação entre equipes**
+
+**Compartilhamento de conhecimento**
+
+**Documentação dinâmica**
+
+**Visão do todo**
+
+
+
+---
+
+## CRC Cards ##
+
+
+
+**US01 - Como gerente eu quero manter o cadastro de vídeos da locadora para que seja possível  catalogar os vídeos existentes**
+
+Substantivos: gerente, vídeos, locadora
+Verbos: manter, catalogar
+
+**Gerente**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Manter videos    |Video        | |
+|Catalogar videos |Locadora     | |
+
+**Video**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Manter dados dos vídeos|Locadora     | |
+
+**Locadora**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Manter dados do catálogo de videos|Vídeo, Gerente| |
+
+
+
+---
+
+
+**US02 - Como gerente eu quero manter o cadastro de clientes da locadora para que as informações a respeito do cliente estejam disponíveis quando necessário.**
+
+Substantivos: gerente, clientes, locadora
+Verbos: manter
+
+**Cliente**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Descrever as características dos clientes|Locadora     | |
+
+
+---
+
+
+**US03 - Como gerente eu quero imprimir um relatório dos vídeos pendentes para poder relembrar os clientes da data de devolução dos vídeos**
+
+Substantivos: gerente, clientes, relatório, vídeos
+Verbos: imprimir, poder, relembrar
+
+**Gerente**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Imprimir Relatórios|Locadora, Relatório| |
+
+**Relatório**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Descrever as características dos relatórios|Gerente      | |
+
+
+---
+
+
+**US04 - Como cliente eu quero ter um cartão que me identifique para que eu possa alugar os vídeos**
+
+Substantivos: cliente, cartão, vídeos
+Verbos: ter, alugar
+
+**Cliente**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Alugar Vídeos   |Locadora     | |
+
+**Cartão**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Identificar os Clientes|Gerente      | |
+
+
+---
+
+
+**US05 - Como funcionário eu quero manter o controle dos vídeos alugados para que seja possível cobrar taxas em caso da devolução ocorrer com atraso**
+
+Substantivos: funcionário, vídeos
+Verbos: manter, cobrar
+
+**Funcionário**
+|Responsabilidades|Colaboração| |
+|:----------------|:------------|:|
+|Realizar a locação de vídeos, Realizar a devolução de vídeos, Cobrar taxas dos clientes|Locadora     | |
+
+
+---
+
+# Referências #
+
+[Agile Modeling, Introduction to User Stories](http://www.agilemodeling.com/artifacts/userStory.htm#Figure1)
+
+[Blog ScrumHalf, User Stories – O que são? Como Usar?](http://blog.scrumhalf.com.br/2011/10/user-stories-o-que-sao-como-usar/)
+
+[Blog ScrumHalf, Critérios de Aceitação das User Stories](http://blog.scrumhalf.com.br/2011/10/criterios-de-aceitacao-das-user-stories/)
+
+[Rad Lab, UC Berkeley. User Stories and Design, 2007](http://radlab.cs.berkeley.edu/w/upload/3/36/UserStories.pdf)
+
+[Montain Got Software, User Stories Applied for Agile Software Development](http://www.mountaingoatsoftware.com/system/presentation/file/35/UserStoriesXPAtlanta.pdf)
+
+http://www.dtsato.com/blog/work/introduzindo_desenvolvimento_orientado_comportamento_bdd/
+
+http://dannorth.net/introducing-bdd/
+
+Material produzido pelo aluno Guilherme Baufaker Rego na discplina de V&V na FGA

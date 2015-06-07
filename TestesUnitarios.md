@@ -1,0 +1,282 @@
+# Testes Unitários #
+
+Os testes que você precisa escrever em XP são isolados e automáticos. Nenhum teste interage com os outros que você escreve. Dessa forma você evita o problema de que um teste falhe e cause centenas de outras falhas. Os testes também são automáticos. Os testes são mais valiosos quando o nível de estresse aumenta, quando as pessoas estão trabalhando demais, quando o julgamento humano começa a falhar. Logo, os testes precisam ser automáticos - retornando um indicativo não-qualificativo, do tipo polegar para cima, polegar para baixo, de como o sistema está se comportando.
+
+Os programadores escrevem os testes método a método. Um programador escreve um teste sob as seguintes circunstâncias:
+
+  * Se a interface de um método não está muito clara, você escreve um teste antes de escrever o método.
+  * Se a interface é clara, mas você imagina que a implementação será um pouco complicada, você escreve um teste antes de escrever o método.
+  * Se você imagina circunstâncias inusitadas em que o código deve funcionar como esperado, você escreve um teste para comunicar as circunstâncias.
+  * Se você descobre um problema depois, você escreve um teste que isole o problema.
+  * Se você está prestes a refatorar código e você não está certo de como ele vai se comportar e ainda não existe um teste para esse aspecto do comportamento em questão, você escreve um teste primeiro.
+
+Os testes de unidade escritos pelo programador sempre executam a 100%. Se um dos testes de unidade falha, ninguém no time tem um trabalho mais importante do que consertar os testes. Isso porque, se um teste está falhando, você tem uma quantidade desconhecida de trabalho a fazer para consertá-lo. Pode levar apenas um minuto, mas também pode durar um mês.
+
+
+
+---
+
+## Algumas palavras de Beck e Gamma ##
+
+Sometimes you just won't feel like writing tests, especially at first. Don't. However, pay attention to how much more trouble you get into, how much more time you spend debugging, and how much more stress you feel when you don't have tests. We have been amazed at how much more fun programming is and how much more aggressive we are willing to be and how much less stress we feel when we are supported by tests. The difference is dramatic enough to keep us writing tests even when we don't feel like it.
+
+
+---
+
+
+## Testes Unitários com JUnit ##
+
+O JUnit é um framework open-source, criado por Erich Gamma e Kent Beck, com suporte à criação de testes automatizados na linguagem de programação Java.
+Esse framework facilita a criação de código para a automação de testes com apresentação dos resultados. Com ele, pode ser verificado se cada método de uma classe funciona da forma esperada, exibindo possíveis erros ou falhas.
+O teste de unidade testa o menor dos componentes de um sistema de maneira isolada. Cada uma dessas unidades (chamadas de métodos) define um conjunto de estímulos, e de dados de entrada e saída associados a cada estímulo. As entradas são parâmetros e as saídas são o valor de retorno, exceções ou o estado do objeto. Tipicamente um teste unitário executa um método individualmente e compara uma saída conhecida após o processamento da mesma.
+
+
+---
+
+
+### Configuração ###
+Para utilizar o JUnit, é necessário a utilização do .jar do JUnit que pode ser encontrado na [página principal](http://www.junit.org) do próprio framework. Para configurar o JUnit em seu ambiente, é necessário adicionar o .jar do JUnit ao caminho do seu projeto.
+
+
+
+---
+
+### Exemplo utilizando JUnit 4.x ###
+
+**Classe:**
+
+```
+public class Calculadora {
+    public int soma(int a, int b){
+        return a + b;
+    }   
+}
+```
+
+
+**Caso de teste:**
+
+```
+import org.junit.Assert;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+ 
+Calculadora calc = new Calculadora();
+
+public class TesteCalculadora {
+ @Test
+ public void testeSoma() {
+         assertEquals(3, calc.soma(1, 2));
+ }
+}
+```
+
+
+---
+
+
+## Exemplo Prático - [Sistema AVS](http://code.google.com/p/sistemaavs-mds-01/) ##
+
+**Classe que realiza locação de filmes:**
+
+```
+
+package avs.sistemaavs.controller;
+
+import java.util.*;
+import avs.sistemaavs.model.*;
+
+public class ControladoraLocacao {
+	Cliente c1 = null, c2 = null;
+	ControladoraBusca b = new ControladoraBusca();
+	
+	public void realizarLocacao(Locadora locadora, ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS){
+		ControladoraDevolucao controladoraDevolucao = new ControladoraDevolucao();
+		if(verificarPendenciasCliente(locadora, numeroCartaoAVS, controladoraDevolucao)){
+			if(verificarVideos(locadora, numeroCatalogoFilmes)){
+				
+				Aluguel aluguel = new Aluguel(calcularDataDevolucao(), numeroCatalogoFilmes, numeroCartaoAVS, calcularTaxaLocacao(numeroCatalogoFilmes));
+				
+				atualizarValorDevido(locadora, numeroCatalogoFilmes, numeroCartaoAVS);
+				
+				adicionarAluguelEmLocadora(locadora, aluguel);
+			}
+		}
+	}
+
+	private void adicionarAluguelEmLocadora(Locadora locadora, Aluguel aluguel) {
+		locadora.getAluguel().add(aluguel);
+	}
+
+	private void atualizarValorDevido(Locadora locadora, ArrayList<Integer> numeroCatalogoFilmes, int numeroCartaoAVS) {
+		c1 = b.BuscaCliente(locadora, c2, numeroCartaoAVS);
+		c1.setValorDevido(calcularTaxaLocacao(numeroCatalogoFilmes));
+	}
+	
+	
+	private boolean verificarPendenciasCliente(Locadora locadora, int numeroCartaoAVS, ControladoraDevolucao controladoraDevolucao) {
+		return clienteExiste(locadora, numeroCartaoAVS) && clienteSemPendencias(locadora,numeroCartaoAVS, controladoraDevolucao);
+	}
+
+	private boolean clienteSemPendencias(Locadora locadora, int numeroCartaoAVS, ControladoraDevolucao controladoraDevolucao) {
+		return controladoraDevolucao.verificarPendenciaCliente(locadora, numeroCartaoAVS);
+	}
+
+	private boolean clienteExiste(Locadora locadora, int numeroCartaoAVS) {
+		return verificarCliente(locadora, numeroCartaoAVS);
+	}
+
+	
+	public double calcularTaxaLocacao(ArrayList<Integer> numeroCatalogoFilmes){
+		return contarVideos(numeroCatalogoFilmes) *2.0;
+	}
+
+	private int contarVideos(ArrayList<Integer> numeroCatalogoFilmes) {
+		int numeroVideos = 0;
+		Iterator<Integer> it = b.BuscaNumeroCatalogo(numeroCatalogoFilmes);
+		while(it.hasNext()) {	 
+			it.next(); 
+			numeroVideos++;
+		}
+		return numeroVideos;
+	}
+
+	public Date calcularDataDevolucao(){
+		Locale pt = new Locale("pt", "br");
+		Calendar c = Calendar.getInstance(pt);
+		c.add(Calendar.DATE, 3);
+		Date dataDevolucao = c.getTime();
+		return dataDevolucao;
+	}
+
+	
+	public boolean verificarVideos(Locadora locadora, ArrayList<Integer> numeroCatalogoFilmes){
+		
+		Iterator<Integer> it = b.BuscaNumeroCatalogo(numeroCatalogoFilmes); 
+		
+		return atualizarQuantidadeVideos(locadora, it);
+
+	}
+
+	
+	public boolean atualizarQuantidadeVideos(Locadora locadora, Iterator<Integer> it) {
+		while(it.hasNext()){
+			Integer numeroCatalogo = it.next();
+			Video v1 = null, v2 = b.BuscaVideo(locadora, v1, numeroCatalogo);
+			if(v2 != null){
+				if(numeroCatalogo.equals(v2.getNumeroCatalogo())){
+					if(v2.getQuantidade()>0){
+						setarQuantidadeVideos(locadora, v2);
+					}else{
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+	
+	private void setarQuantidadeVideos(Locadora locadora, Video v){
+			v.setQuantidade(v.getQuantidade()-1);
+	}
+	
+	public boolean verificarCliente(Locadora locadora,int numeroCartaoAVS){
+		c1 = b.BuscaCliente(locadora, c2, numeroCartaoAVS);
+		if (c1 == null)
+			return false;
+		else
+			return true;
+
+	}
+
+}
+```
+
+**Caso de Teste:**
+
+```
+
+package avs.sistemaavs.controladoras;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Iterator;
+
+import avs.sistemaavs.controller.*;
+import avs.sistemaavs.model.*;
+import org.junit.*;
+
+
+public class TestControladoraLocacao {
+	ControladoraLocadora controladoraLocadora = new ControladoraLocadora();
+	ControladoraLocacao controladoraLocacao = new ControladoraLocacao();
+	Locadora locadora = new Locadora();
+	ArrayList<Integer> filmes = new ArrayList<Integer>();
+	ArrayList<Integer> testeFilmes = new ArrayList<Integer>();//array vazio para testar o calculo de taxas
+	Video v;
+	
+	@Before
+	public void setUp(){
+		controladoraLocadora.cadastrarCliente(locadora, new Cliente("Kamilla", 234, "Rua azul", 789, 908, new CartaoAVS(432), 0.0));
+		controladoraLocadora.cadastrarVideo(locadora, new Video(1, 4, "Um corpo que cai", "1958", "Drama", 3));
+		controladoraLocadora.cadastrarVideo(locadora, new Video(2, 3, "Casablanca", "1942", "Drama", 1));
+		controladoraLocadora.cadastrarVideo(locadora, new Video(3, 1, "Cinema Paradiso", "1988", "Comédia", 2));
+		
+		Iterator<Video> it = locadora.getVideo().iterator();
+		while(it.hasNext()){
+			v = (Video) it.next();
+			filmes.add(v.getNumeroCatalogo());
+		}
+		
+	}
+
+	@Test
+	public void testRealizarLocacao() {
+		controladoraLocacao.realizarLocacao(locadora, filmes, 432);
+		assertEquals(false, locadora.getAluguel().isEmpty());
+	}
+	
+	@Test
+	public void testCalcularTaxaLocacao(){
+		assertEquals(0.0, controladoraLocacao.calcularTaxaLocacao(testeFilmes), 0);
+		assertEquals(6.0, controladoraLocacao.calcularTaxaLocacao(filmes), 0);	
+	}
+	
+	@Test
+	public void calcularDataDevolucao(){
+		Calendar c = Calendar.getInstance();
+		c.add(c.DATE, 3);
+		assertEquals(c.getTime().getDay(), controladoraLocacao.calcularDataDevolucao().getDay());
+		assertEquals(c.getTime().getMonth(), controladoraLocacao.calcularDataDevolucao().getMonth());
+	}
+
+	@Test
+	public void verificarVideos(){
+		assertEquals(true, controladoraLocacao.verificarVideos(locadora, filmes));
+		
+		controladoraLocacao.realizarLocacao(locadora, filmes, 123);
+		assertEquals(false, controladoraLocacao.verificarVideos(locadora, filmes));
+		
+	}
+	
+	@Test
+	public void verificarClientes(){
+		assertEquals(true, controladoraLocacao.verificarCliente(locadora, 432));
+		assertEquals(false, controladoraLocacao.verificarCliente(locadora, 123));
+	}
+
+}
+```
+
+
+---
+
+# Referências #
+
+[Site oficial do JUnit](http://www.junit.org)
+
+[Wikipédia](http://pt.wikipedia.org/wiki/JUnit)
+
+[Manual JUnit](http://junit.sourceforge.net/doc/cookstour/cookstour.htm)
